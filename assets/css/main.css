@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/SofiaProUltraLight.woff') format('woff');
+}
+
+body {
+  background-image: url(../images/wursthall-comingsoon-bg.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  font-family: 'Sofia Pro';
+  text-align: center;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  min-height: 480px;
+}
+
+.logo_container {
+  top: 20%;
+  width: 100%;
+  position: absolute;
+}
+
+.footer {
+  bottom: 10%;
+  width: 100%;
+  position: absolute;
+}
+
+.copyright {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.social_icon {
+  width: 20px;
+  height: 20px;
+  margin: 15px 15px;
+}

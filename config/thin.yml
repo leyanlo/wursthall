@@ -1,0 +1,15 @@
+---
+chdir: /home/deploy/apps/wursthall/current
+environment: production
+address: localhost
+port: 3003
+timeout: 30
+wait: 10
+log: /home/deploy/apps/wursthall/shared/log/thin.log
+pid: /home/deploy/apps/wursthall/shared/pids/thin.pid
+socket: /tmp/wursthall-thin.sock
+max_conns: 1024
+max_persistent_conns: 200
+require: []
+servers: 1
+daemonize: true
