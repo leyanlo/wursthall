@@ -10,7 +10,7 @@ module Views
           #link rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.ico'
           #link rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Inconsolata:400,700|Raleway:400,700'
           #script src: 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'
-          rawtext assets :css
+          rawtext assets(:css)
           render_head
           render_analytics
           meta name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0'
