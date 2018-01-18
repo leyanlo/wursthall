@@ -86,10 +86,9 @@ module Views
 
 
           div class: 'third_section_menu' do
-            img src: '/images/home_menu_button_lunch-off@2x.jpg', class: 'menu_lunch'
-            img src: '/images/home_menu_button_dinner-off@2x.jpg', class: 'menu_dinner'
-            img src: '/images/home_menu_button_happyhour-off@2x.jpg', class: 'menu_hh'
-            img src: '/images/home_menu_button_latenight-off@2x.jpg', class: 'menu_latenight'
+            img src: '/images/home_menu_button_dinner-off@2x.jpg', class: 'menu_main'
+            img src: '/images/home_menu_button_happyhour-off@2x.jpg', class: 'menu_latenight'
+            img src: '/images/home_menu_button_lunch-off@2x.jpg', class: 'menu_kids'
             img src: '/images/home_menu_button_drinks-off@2x.jpg', class: 'menu_drinks'
           end
         end
@@ -119,7 +118,7 @@ module Views
     end
 
     def render_map
-      iframe width: "600", height:"450", frameborder:"0", style:"border:0", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY"
+      iframe width: "300", height:"450", frameborder:"0", style:"border:0", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY"
     end
 
     def render_footer
