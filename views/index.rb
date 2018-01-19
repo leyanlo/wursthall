@@ -5,33 +5,26 @@ module Views
     NAV_ITEMS = [
       ['HOME', '/'],
       ['About', '/'],
+      ['Logo', '/'],
       ['Menu', '/'],
       ['Contact', '/'],
     ].freeze
 
     def render_nav
       div class: 'nav_container' do
-        img src: '/images/icon-wursthall.svg', class: 'small_image'
-
-        div class: 'right' do
-          ul class: 'location' do
-            img src: '/images/icon-clock.png', class: 'clock_icon'
-            li '11:00AM - 3:00 PM'
-            li '310 Baldwin ave., San Mateo, CA 94401'
-            li '650-305-1604'
-            img src: '/images/button-facebook-off.png', class: 'social_icon'
-            img src: '/images/button-instagram-off.png', class: 'social_icon'
-            img src: '/images/button-twitter-off.png', class: 'social_icon'
-          end
+       
 
           ul class: 'menu' do
             NAV_ITEMS.each do |name, link|
-              li { a name.upcase, href: link }
+               if name == 'Logo'
+                  img src: '/images/wursthall-logo-1.svg', class: 'logo'
+                else
+                  li { a name.upcase, href: link, class: 'menu_link' }
+                end
             end
           end
         end
-      end
-    end
+     end
 
     def render_main
       div class: 'first_section' do
@@ -102,23 +95,63 @@ module Views
           h2 "CONTACT US"
           p 'Have a question or a comment? Let us know how we can help.'
 
-          render_form
-          render_map
+
+          div class: 'fourth_section_content_left' do
+            render_form
+          end
+
+          div class: 'fourth_section_content_right' do
+            div class: 'fourth_section_content_right_hour' do
+              h3 'HOURS & LOCATION' 
+              hr 
+              h3 'EVERYDAY'
+              br
+              p do 
+                text 'Lunch'
+                br
+                text 'Dinner'
+                br
+                text 'Late Night Menu'
+              end
+            end
+
+              div class: 'fourth_section_content_right_map' do
+                render_map
+              end
+           
+          end
+
         end
       end
 
     end
 
-    def render_form
-      form method: 'post' do
-        input type: 'text', name: 'name', placeholder: 'Name'
-        input type: 'text', name: 'email', placeholder: 'E-Mail'
-        input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...'
-      end
+    def render_form 
+        form method: 'post' do
+          input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
+          br
+          input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
+          br
+          input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
+          br
+          input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
+          input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
+          br
+           input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
+          br
+          input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
+          input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
+          br
+          input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', rows: '1', cols: '25', class: 'form_textarea'
+          br
+          button type: 'submit', class: 'submitbutton' do
+           text "SUBMIT"
+            end
+        end
     end
 
     def render_map
-      iframe width: "300", height:"450", frameborder:"0", style:"border:0", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY"
+      iframe width: "100%", height:"259", frameborder:"0", style:"border:0", scrolling: "no", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY", class: 'map'
     end
 
     def render_footer
