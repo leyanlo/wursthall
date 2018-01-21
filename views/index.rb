@@ -3,21 +3,23 @@ require './views/page'
 module Views
   class Index < Page
     NAV_ITEMS = [
-      ['HOME', '/'],
-      ['About', '/'],
-      ['Logo', '/'],
-      ['Menu', '/menu'],
-      ['Contact', '/'],
+      ['About', '/', 'nav_about'],
+      ['Menu', 'menu', 'nav_menu'],
+      ['Logo', '/', 'nav_logo'],
+      ['Hours', '/', 'nav_hours'],
+      ['Contact', '/', 'nav_contact'],
     ].freeze
 
     def render_nav
-      div class: 'nav_container' do
-        ul class: 'menu' do
-          NAV_ITEMS.each do |name, link|
-            if name == 'Logo'
-              img src: '/images/wursthall-logo-1.svg', class: 'logo'
-            else
-              li { a name.upcase, href: link, class: 'menu_link' }
+      div class: 'nav_container' do       
+
+          ul class: 'menu' do
+            NAV_ITEMS.each do |name, link, classname|
+                if name == 'Logo'
+                  img src: '/images/wursthall-logo-1.svg', class: 'logo'
+                else
+                  li { a name.upcase, href: link, class: classname }
+                end
             end
           end
         end
@@ -77,10 +79,21 @@ module Views
 
 
           div class: 'third_section_menu' do
-            img src: '/images/home_menu_button_dinner-off@2x.jpg', class: 'menu_main'
-            img src: '/images/home_menu_button_happyhour-off@2x.jpg', class: 'menu_latenight'
-            img src: '/images/home_menu_button_lunch-off@2x.jpg', class: 'menu_kids'
-            img src: '/images/home_menu_button_drinks-off@2x.jpg', class: 'menu_drinks'
+
+            div class: 'third_section_menu_left' do
+
+              div class: 'menu_main'
+              div class: 'menu_latenight'
+
+#              img src: '/images/home_menu_button_dinner-off@2x.jpg', class: 'menu_main'
+ #             img src: '/images/home_menu_button_happyhour-off@2x.jpg', class: 'menu_latenight'
+            end
+
+            div class: 'third_section_menu_right' do
+              img src: '/images/home_menu_button_lunch-off@2x.jpg', class: 'menu_kids'
+              img src: '/images/home_menu_button_drinks-off@2x.jpg', class: 'menu_drinks'
+            end
+
           end
         end
       end
@@ -90,19 +103,20 @@ module Views
       div class: 'fourth_section' do
         div class: 'fourth_section_content' do
 
-          h2 "CONTACT US"
-          p 'Have a question or a comment? Let us know how we can help.'
-
 
           div class: 'fourth_section_content_left' do
+            h2 "CONTACT US"
+            p 'Have a question or a comment? Let us know how we can help.'
+
+
             render_form
           end
 
           div class: 'fourth_section_content_right' do
             div class: 'fourth_section_content_right_hour' do
-              h3 'HOURS & LOCATION'
-              hr
-              h3 'EVERYDAY'
+              h3 'HOURS & LOCATION' 
+              hr 
+              h4 'EVERYDAY'
               br
               p do
                 text 'Lunch'
@@ -116,34 +130,35 @@ module Views
             div class: 'fourth_section_content_right_map' do
               render_map
             end
-
           end
+
 
         end
       end
 
     end
 
-    def render_form
-      form method: 'post' do
-        input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
-        br
-        input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
-        br
-        input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
-        br
-        input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
-        input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
-        br
-        input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
-        br
-        input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
-        input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
-        br
-        input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', rows: '1', cols: '25', class: 'form_textarea'
-        br
-        button type: 'submit', class: 'submitbutton' do
-          text "SUBMIT"
+    def render_form 
+        form method: 'post' do
+          input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
+          br
+          input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
+          br
+          input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
+          br
+          input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
+          input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
+          br
+           input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
+          br
+          input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
+          input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
+          br
+          input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', class: 'form_textarea'
+          br
+          button type: 'submit', class: 'submitbutton' do
+           text "SUBMIT"
+            end
         end
       end
     end
@@ -155,5 +170,3 @@ module Views
     def render_footer
     end
 
-  end
-end

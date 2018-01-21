@@ -52,28 +52,49 @@ a {
 .nav_container {
   position: absolute;
   width: 100%;
-  top: 40px;
+  /*left: 35%;*/
 
-  display: inline-block;
   text-align: center;
 }
 
 
 .menu {
+  position: relative;
   list-style-type: none;
   margin: 0;
   padding: 0;
   font-size: 14px;
   font-family: 'Brandon Grotesque';
-  display: inline-block;
+ 
 
-  margin-left: 20px;
+  margin-left: 0px;
+  margin-top: 40px;
+  line-height: 50px;
+  
+}
+
+.nav_about{
+  margin-left: 26px
+}
+
+.nav_menu{
+  margin: 0px 32px;
+}
+
+.nav_hours{
+  margin: 0px 32px;
+}
+
+.nav_contact{
+  padding: 0px;
 }
 
 .logo {
-
-  margin-left: 13px;
-  margin-right: 13px;
+  margin-left: 0px;
+  margin-right: 0px;
+  
+  top: 0px;
+  vertical-align: middle;
 }
 
 .menu li {
@@ -83,7 +104,7 @@ a {
 
 .menu_link {
   padding: 16px;
-
+  top: 
 }
 
 .menu li a {
@@ -220,21 +241,32 @@ a {
   text-align: center;
 }
 
-.menu_main {
+.third_section_menu_left {
   position: relative;
   display: inline-block;
-  width: 130px;
-  /*padding: 2.0%;*/
-  padding: 24px;
 }
 
-.menu_latenight {
+.third_section_menu_right {
+  position: relative;
+  display: inline-block;
+}
+
+.menu_main {
+  background-image: url('/images/home_menu_button_dinner-off.jpg');
   position: relative;
   display: inline-block;
   width: 130px;
-  /*padding: 2.0%;*/
-  padding: 24px;
+  height: 130px;
 }
+
+.menu_main {
+  background-image: url('/images/home_menu_button_happyhour-off.jpg');
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+}
+
 
 .menu_kids {
   position: relative;
@@ -312,7 +344,7 @@ a {
   background-color: rgba(255, 255, 255, 0.75);
   width: 100%;
   height: 130px;
-  margin-bottom: 0px;
+  /*margin-bottom: 0px;*/
   padding: 0px 16px;
   border: solid 1px #ffffff;
 
@@ -320,6 +352,7 @@ a {
   font-family: 'Brandon Grotesque';
   resize: none;
 }
+
 
 .submitbutton {
   width: 100%;
@@ -354,6 +387,14 @@ top: 0px;
   line-height: 10px;
 }
 
+.fourth_section_content_right_hour h4 {
+  color: #ffffff;
+  font-family: 'Brandon Grotesque';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 10px;
+}
+
 .fourth_section_content_right_hour p {
   -webkit-margin-before: -.65em;
   font-family: 'Sofia Pro Light'
@@ -378,51 +419,36 @@ top: 0px;
 
 /*-------MOBILE--------*/
 
-@media only screen and (max-width: 750px) {
-  .small_image {
+@media only screen and (max-width: 720px)  {
+  .logo {
     display: none;
   }
 
-  .location {
-    display: none;
-  }
-
-  .nav_container .right {
-    display: block;
-    position: relative;
-  }
-
-
-  .second_section {
-  width: 100%;
-  height: auto;
-  background-color: #f2efe3;
-  /*position: relative;*/
-  padding-top: 80px;
-  padding-bottom: 11%;
+.nav_about{
+  margin-left: 0px
 }
 
-.second_section_content {
-  width: 100%;
-  display: : block;
-  position: relative;
-  
+.nav_menu{
+  margin-left: 32px;
+  margin-right: 0px;
 }
+
+.nav_hours{
+  margin-left: 32px;
+}
+
+.nav_contact{
+  padding: 0px;
+}
+
 
 
   .second_section_left {
-    /*position: relative;*/
     display: block;
     position: relative;
     width: 87%;
     padding: 0% 6.5%;
   }
-
-
-.second_section_left p {
-  display: block;
-}
-
 
   .big_stamp{
     display: none;
@@ -439,61 +465,80 @@ top: 0px;
   }
 
 
-.third_section {
-  width: 100%;
-  height: auto;
-  padding-top: 80px;
-  padding-bottom: 10%;
-}
-
 .third_section_content {
   padding: 0% 6.5%;
-    text-align: left;
 }
 
 
-.third_section_menu {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  padding-top: 0%;
-  text-align: center;
-}
+
 
 .menu_main {
-  position: relative;
-  display: inline-block;
-  width: 130px;
-  /*padding: 2.0%;*/
   padding: 12px;
 }
 
 .menu_latenight {
-  position: relative;
-  display: inline-block;
-  width: 115px;
-  /*padding: 2.0%;*/
   padding: 12px;
 }
 
 .menu_kids {
-  position: relative;
-  display: inline-block;
-  width: 115px;
-  /*padding: 2.0%;*/
   padding: 12px;
-
 }
 
 .menu_drinks {
-  position: relative;
-  display: inline-block;
-  width: 115px;
-  /*padding: 2.0%;*/
   padding: 12px;
 }
 
 
+.fourth_section {
+  height: 1150px;
 }
 
+.fourth_section_content {
+  position: block;
+  padding: 0% 6.5%;
+  text-align: left;
+
+display: flex;   
+    flex-flow:column-reverse nowrap
+}
+
+
+.fourth_section_content_left {
+  display: block;
+  width: 100%;
+  top: 130px;
+
+}
+
+
+
+.fourth_section_content_right {
+  display: block;
+  width: 100%;
+  top: 20px;
+  padding-left: 0%;
+
+}
+
+.fourth_section_content_right_hour h3 {
+  font-family: 'Brandon Grotesque';
+  font-size: 36px;
+  letter-spacing: 0.2px;
+  font-weight: normal;
+  line-height: 30px;
+
+  position: relative;
+  -webkit-margin-before: 0em;
+  top: 0%;
+}
+
+.fourth_section_content_right_hour h4 {
+  position: relative;
+  -webkit-margin-before: 3.5em;
+  top: 0%;
+}
+
+hr {
+  display: none;
+}
 
