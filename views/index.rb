@@ -6,25 +6,23 @@ module Views
       ['HOME', '/'],
       ['About', '/'],
       ['Logo', '/'],
-      ['Menu', '/'],
+      ['Menu', '/menu'],
       ['Contact', '/'],
     ].freeze
 
     def render_nav
       div class: 'nav_container' do
-       
-
-          ul class: 'menu' do
-            NAV_ITEMS.each do |name, link|
-               if name == 'Logo'
-                  img src: '/images/wursthall-logo-1.svg', class: 'logo'
-                else
-                  li { a name.upcase, href: link, class: 'menu_link' }
-                end
+        ul class: 'menu' do
+          NAV_ITEMS.each do |name, link|
+            if name == 'Logo'
+              img src: '/images/wursthall-logo-1.svg', class: 'logo'
+            else
+              li { a name.upcase, href: link, class: 'menu_link' }
             end
           end
         end
-     end
+      end
+    end
 
     def render_main
       div class: 'first_section' do
@@ -102,11 +100,11 @@ module Views
 
           div class: 'fourth_section_content_right' do
             div class: 'fourth_section_content_right_hour' do
-              h3 'HOURS & LOCATION' 
-              hr 
+              h3 'HOURS & LOCATION'
+              hr
               h3 'EVERYDAY'
               br
-              p do 
+              p do
                 text 'Lunch'
                 br
                 text 'Dinner'
@@ -115,10 +113,10 @@ module Views
               end
             end
 
-              div class: 'fourth_section_content_right_map' do
-                render_map
-              end
-           
+            div class: 'fourth_section_content_right_map' do
+              render_map
+            end
+
           end
 
         end
@@ -126,28 +124,28 @@ module Views
 
     end
 
-    def render_form 
-        form method: 'post' do
-          input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
-          br
-          input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
-          br
-          input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
-          br
-          input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
-          input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
-          br
-           input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
-          br
-          input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
-          input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
-          br
-          input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', rows: '1', cols: '25', class: 'form_textarea'
-          br
-          button type: 'submit', class: 'submitbutton' do
-           text "SUBMIT"
-            end
+    def render_form
+      form method: 'post' do
+        input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
+        br
+        input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
+        br
+        input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
+        br
+        input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
+        input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
+        br
+        input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
+        br
+        input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
+        input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
+        br
+        input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', rows: '1', cols: '25', class: 'form_textarea'
+        br
+        button type: 'submit', class: 'submitbutton' do
+          text "SUBMIT"
         end
+      end
     end
 
     def render_map

@@ -57,5 +57,9 @@ class Wursthall < Roda
     r.root do
       render('index')
     end
+
+    r.is 'menu' do
+      render('menu')
+    end
   end
 end
