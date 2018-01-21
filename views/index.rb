@@ -11,15 +11,14 @@ module Views
     ].freeze
 
     def render_nav
-      div class: 'nav_container' do       
+      div class: 'nav_container' do
 
-          ul class: 'menu' do
-            NAV_ITEMS.each do |name, link, classname|
-                if name == 'Logo'
-                  img src: '/images/wursthall-logo-1.svg', class: 'logo'
-                else
-                  li { a name.upcase, href: link, class: classname }
-                end
+        ul class: 'menu' do
+          NAV_ITEMS.each do |name, link, classname|
+            if name == 'Logo'
+              img src: '/images/wursthall-logo-1.svg', class: 'logo'
+            else
+              li { a name.upcase, href: link, class: classname }
             end
           end
         end
@@ -62,9 +61,6 @@ module Views
         end
       end
 
-
-
-
       div class: 'third_section' do
         div class: 'third_section_content' do
 
@@ -85,8 +81,8 @@ module Views
               div class: 'menu_main'
               div class: 'menu_latenight'
 
-#              img src: '/images/home_menu_button_dinner-off@2x.jpg', class: 'menu_main'
- #             img src: '/images/home_menu_button_happyhour-off@2x.jpg', class: 'menu_latenight'
+              #              img src: '/images/home_menu_button_dinner-off@2x.jpg', class: 'menu_main'
+              #             img src: '/images/home_menu_button_happyhour-off@2x.jpg', class: 'menu_latenight'
             end
 
             div class: 'third_section_menu_right' do
@@ -97,8 +93,6 @@ module Views
           end
         end
       end
-
-
 
       div class: 'fourth_section' do
         div class: 'fourth_section_content' do
@@ -114,8 +108,8 @@ module Views
 
           div class: 'fourth_section_content_right' do
             div class: 'fourth_section_content_right_hour' do
-              h3 'HOURS & LOCATION' 
-              hr 
+              h3 'HOURS & LOCATION'
+              hr
               h4 'EVERYDAY'
               br
               p do
@@ -131,34 +125,30 @@ module Views
               render_map
             end
           end
-
-
         end
       end
-
     end
 
-    def render_form 
-        form method: 'post' do
-          input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
-          br
-          input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
-          br
-          input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
-          br
-          input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
-          input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
-          br
-           input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
-          br
-          input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
-          input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
-          br
-          input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', class: 'form_textarea'
-          br
-          button type: 'submit', class: 'submitbutton' do
-           text "SUBMIT"
-            end
+    def render_form
+      form method: 'post' do
+        input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
+        br
+        input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
+        br
+        input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
+        br
+        input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
+        input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
+        br
+        input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
+        br
+        input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
+        input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
+        br
+        input type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', class: 'form_textarea'
+        br
+        button type: 'submit', class: 'submitbutton' do
+          text "SUBMIT"
         end
       end
     end
@@ -169,4 +159,5 @@ module Views
 
     def render_footer
     end
-
+  end
+end
