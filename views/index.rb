@@ -3,22 +3,22 @@ require './views/page'
 module Views
   class Index < Page
     NAV_ITEMS = [
-      ['About', '/', 'nav_about'],
-      ['Menu', 'menu', 'nav_menu'],
-      ['Logo', '/', 'nav_logo'],
-      ['Hours', '/', 'nav_hours'],
-      ['Contact', '/', 'nav_contact'],
+      ['About', '/'],
+      ['Menu', 'menu'],
+      ['Logo', '/'],
+      ['Hours', '/'],
+      ['Contact', '/'],
     ].freeze
 
     def render_nav
       div class: 'nav_container' do
 
         ul class: 'menu' do
-          NAV_ITEMS.each do |name, link, classname|
+          NAV_ITEMS.each do |name, link|
             if name == 'Logo'
               img src: '/images/wursthall-logo-1.svg', class: 'logo'
             else
-              li { a name.upcase, href: link, class: classname }
+              li { a name.upcase, href: link}
             end
           end
         end
@@ -76,18 +76,18 @@ module Views
 
           div class: 'third_section_menu' do
 
-            div class: 'third_section_menu_left' do
+            div class: 'third_section_menu_col' do
 
               div class: 'menu_main'
               div class: 'menu_latenight'
 
-              #              img src: '/images/home_menu_button_dinner-off@2x.jpg', class: 'menu_main'
-              #             img src: '/images/home_menu_button_happyhour-off@2x.jpg', class: 'menu_latenight'
             end
 
-            div class: 'third_section_menu_right' do
-              img src: '/images/home_menu_button_lunch-off@2x.jpg', class: 'menu_kids'
-              img src: '/images/home_menu_button_drinks-off@2x.jpg', class: 'menu_drinks'
+            div class: 'third_section_menu_col' do
+              
+              div class: 'menu_kids'
+              div class: 'menu_drinks'
+
             end
 
           end
@@ -158,6 +158,21 @@ module Views
     end
 
     def render_footer
+      div class: 'footer' do
+        p do
+          text "Wursthall 2017. All Rights Reserved"
+          br
+          text "310 Baldwin ave., San Mateo, CA 94401 • 650-305-1504"
+          end
+
+
+          img src: '/images/icon-facebook-sml.svg', class: 'footer_icons'
+          img src: '/images/icon-instagram-sml.svg', class: 'footer_icons'
+          img src: '/images/icon-twitter-sml.svg', class: 'footer_icons'
+
+      end
+
+
     end
   end
 end
