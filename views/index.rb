@@ -3,11 +3,11 @@ require './views/page'
 module Views
   class Index < Page
     NAV_ITEMS = [
-      ['About', '/'],
-      ['Menu', 'menu'],
+      ['About', '#about'],
+      ['Menu', '#menu'],
       ['Logo', '/'],
-      ['Hours', '/'],
-      ['Contact', '/'],
+      ['Hours', '#hours'],
+      ['Contact', '#contact'],
     ].freeze
 
     def render_nav
@@ -15,8 +15,22 @@ module Views
 
         ul class: 'menu' do
           NAV_ITEMS.each do |name, link|
+
             if name == 'Logo'
-              img src: '/images/wursthall-logo-1.svg', class: 'logo'
+             img src: '/images/wursthall-logo-1.svg', class: 'logo'
+
+
+           elsif name == 'Menu'
+              div class: 'dropdown' do
+               li {a 'MENU', href: '#menu'}
+                div class: 'dropdown-content' do
+                  a 'MAIN', href: '/'
+                  a 'DRINKS', href: '/'
+                  a 'LATE NIGHT', href: '/'
+                  a 'KIDS', href: '/'
+                end
+              end
+
             else
               li { a name.upcase, href: link}
             end
@@ -30,36 +44,43 @@ module Views
         img src: '/images/icon-wursthall.svg', class: 'big_image'
       end
 
-      div class: 'second_section' do
-        div class: 'second_section_content' do
-          div class: 'second_section_left' do
 
-            img src: '/images/stamp-1.png', class: 'big_stamp'
+      a name: 'about' do
 
-            h2 "ABOUT US"
+        div class: 'second_section' do
 
-            p do
-              text "Wursthall is a restaurant & bierhaus located in downtown San Mateo. We aim to bring the festivity and community of the German beerhall to the Bay Area, and hope to create a gathering space for friends and families."
-              br
-              br
-              text "San Mateo natives, Adam Simpson and Tyson Mao, have partnered with James Beard award winning chef Kenji López-Alt to deliver a German and Austrian inspired menu for your enjoyment. Our menu features sausage plates, XXX (crispy fried potatoes), and more. We are proud to partner with Anne and Robert Moser of Backhaus Bakery for our pretzels and buns."
-              br
-              br
-              text  "We feature 22 beers which include German and Belgian style ales and local craft brews. We also feature a selection of red and white wine on tap."
-              br
-              br
-              text "Whether it’s an outing with some colleagues, a drink with an old friend, or a family night out for dinner, we hope you come and enjoy our contribution to downtown San Mateo. If you see us around, don’t hesitate to say hello!"
+        
+          div class: 'second_section_content' do
+            div class: 'second_section_left' do
+
+              img src: '/images/stamp-1.png', class: 'big_stamp'
+
+                h2 "ABOUT US"
+
+              p do
+                text "Wursthall is a restaurant & bierhaus located in downtown San Mateo. We aim to bring the festivity and community of the German beerhall to the Bay Area, and hope to create a gathering space for friends and families."
+                br
+                br
+                text "San Mateo natives, Adam Simpson and Tyson Mao, have partnered with James Beard award winning chef Kenji López-Alt to deliver a German and Austrian inspired menu for your enjoyment. Our menu features sausage plates, XXX (crispy fried potatoes), and more. We are proud to partner with Anne and Robert Moser of Backhaus Bakery for our pretzels and buns."
+                br
+                br
+                text  "We feature 22 beers which include German and Belgian style ales and local craft brews. We also feature a selection of red and white wine on tap."
+                br
+                br
+                text "Whether it’s an outing with some colleagues, a drink with an old friend, or a family night out for dinner, we hope you come and enjoy our contribution to downtown San Mateo. If you see us around, don’t hesitate to say hello!"
+              end
+
+
+              img src: '/images/stamp-2.png', class: 'small_stamp'
             end
 
-
-            img src: '/images/stamp-2.png', class: 'small_stamp'
-          end
-
-          div class: 'second_section_right' do
-            img src: '/images/aboutus-imgs.png', class: 'aboutus_image'
+            div class: 'second_section_right' do
+              img src: '/images/aboutus-imgs.png', class: 'aboutus_image'
+            end
           end
         end
       end
+
 
       div class: 'third_section' do
         div class: 'third_section_content' do
@@ -70,7 +91,8 @@ module Views
             text "Lorem ipsum dolor sit amet, consul gloriatur at mel. At omnium expetendis pro. Persius detracto concludaturque id eos, nam alia euismod fabellas te, sed unum minimum lobortis eu. Utinam theophrastus no mel, nisl possit ne his, id dolor pertinacia his. Nulla scriptorem no mel. Volumus lobortis urbanitas mea te."
             br
             br
-            text "Eu vis saperet oportere, labore putant molestiae his cu. Animal intellegat eu cum, postea cetero salutandi ad cum, lorem munere eos at. At nam veri melius, mea eu minimum delicatissimi. Id simul accusam phaedrum sed, tibique similique eu nam. An vel nobis eligendi vituperata. Sit ad vocent placerat honestatis, eu qui eirmod voluptatibus. Cu inermis accumsan duo, regione aliquid in vix. Download Menu"
+            text "Eu vis saperet oportere, labore putant molestiae his cu. Animal intellegat eu cum, postea cetero salutandi ad cum, lorem munere eos at. At nam veri melius, mea eu minimum delicatissimi. Id simul accusam phaedrum sed, tibique similique eu nam. An vel nobis eligendi vituperata. Sit ad vocent placerat honestatis, eu qui eirmod voluptatibus. Cu inermis accumsan duo, regione aliquid in vix. " 
+            a 'Download Menu', href: '/'
           end
 
 
@@ -78,26 +100,41 @@ module Views
 
             div class: 'third_section_menu_col' do
 
-              div class: 'menu_main'
-              div class: 'menu_latenight'
+              div class: 'menu_main' do
+                a 'MAIN', href: '/'
+              end
+
+              div class: 'menu_drinks' do
+                a 'DRINKS', href: '/'
+              end
 
             end
 
             div class: 'third_section_menu_col' do
               
-              div class: 'menu_kids'
-              div class: 'menu_drinks'
+              div class: 'menu_latenight' do
+                a 'LATE NIGHT', href: '/'
+              end
+
+              div class: 'menu_kids' do
+                a 'KIDS', href: '/'
+              end
+
+
+
 
             end
 
           end
         end
       end
+    
+
 
       div class: 'fourth_section' do
         div class: 'fourth_section_content' do
 
-
+        a name: 'contact' do
           div class: 'fourth_section_content_left' do
             h2 "CONTACT US"
             p 'Have a question or a comment? Let us know how we can help.'
@@ -105,29 +142,43 @@ module Views
 
             render_form
           end
+        end
 
+        a name: 'hours' do
           div class: 'fourth_section_content_right' do
             div class: 'fourth_section_content_right_hour' do
               h3 'HOURS & LOCATION'
               hr
               h4 'EVERYDAY'
               br
-              p do
-                text 'Lunch'
-                br
-                text 'Dinner'
-                br
-                text 'Late Night Menu'
+             
+              div class: 'service_hour1' do
+                p do
+                  text 'Main Menu'
+                  br
+                  text 'Late Night Menu'
+              end  
+              end  
+
+              div class: 'service_hour2' do
+                p do
+                  text '11:00 AM - 9:30 PM'
+                  br
+                  text '9:30 PM - 12:00 AM'
+                
+              end    
+
               end
             end
 
-            div class: 'fourth_section_content_right_map' do
-              render_map
+                  div class: 'fourth_section_content_right_map' do
+                    render_map
+                  end
+                end
+              end
             end
           end
         end
-      end
-    end
 
     def render_form
       form method: 'post' do
