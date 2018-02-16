@@ -85,14 +85,11 @@ a {
 
 
 .logo {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin: 0 5px;
   
   top: 0px;
   vertical-align: middle;
 }
-
-/* --- testing */
 
 .dropdown {
     position: relative;
@@ -103,18 +100,17 @@ a {
     display: none;
     position: absolute;
     background-color: #000000;
-    width: 140px;
+    width: 100px;
 
     z-index: 1;
     text-align: left;
     padding: 20px 20px;
     line-height: 25px;
-    left: -5px;
+    left: 0px;
 }
 
 .dropdown-content a {
     color: rgba(255, 255, 255, 0.5);
-    padding: 3px 0px;
     text-decoration: none;
     display: block;
 }
@@ -133,16 +129,16 @@ a {
 
 
 
-/* --- testing */
-
 .menu li {
   display: inline-block;
-  margin: 0px 16px;
+  margin: 0px 18px;
 }
 
 .menu li a {
   color: rgba(255, 255, 255, 0.5);
 }
+
+/* ------ first section------*/
 
 .first_section {
   width: 100%;
@@ -236,7 +232,7 @@ a {
 
 
 
-/* ------ third_section------*/
+/* ------ third section------*/
 
 .third_section {
   position: relative;
@@ -378,6 +374,8 @@ a {
 .menu_drinks:hover {
   background-image: url('/images/drinks_on.png');
 }
+
+/* ------ fourth section------*/
 
 .fourth_section {
   width: 100%;
@@ -521,8 +519,10 @@ top: -5px;
   filter: grayscale(100%);
 }
 
+/* ------ footer ------*/
+
 .footer {
-  height: 100px;
+  height: 120px;
   background-color: #000000;
   margin-top: -50px;
   text-align: center;
@@ -538,7 +538,8 @@ top: -5px;
 }
 
 .footer_icons {
-  padding: 8px;
+  width: 20px;
+  margin: 18px;
 }
 
 /*--------------MENU PAGE--------------*/
@@ -623,7 +624,7 @@ top: -5px;
 
 .menu_food_items {
   width: 75%;
-  margin: 0px 12.5%;
+  margin: 7px 12.5%;
   background-color: #ffffff;
 }
 

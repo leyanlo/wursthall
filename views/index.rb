@@ -216,10 +216,17 @@ module Views
           text "310 Baldwin ave., San Mateo, CA 94401 • 650-305-1504"
           end
 
+          a href: 'https://www.facebook.com/wursthall/' do
+            img src: '/images/icon-facebook-sml.svg', class: 'footer_icons'
+          end
 
-          img src: '/images/icon-facebook-sml.svg', class: 'footer_icons'
-          img src: '/images/icon-instagram-sml.svg', class: 'footer_icons'
-          img src: '/images/icon-twitter-sml.svg', class: 'footer_icons'
+          a href: 'https://www.instagram.com/wursthall/' do
+            img src: '/images/icon-instagram-sml.svg', class: 'footer_icons'
+          end
+
+          a href: 'https://twitter.com/wursthall/' do
+            img src: '/images/icon-twitter-sml.svg', class: 'footer_icons'
+          end      
 
       end
 
