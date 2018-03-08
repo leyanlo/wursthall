@@ -63,16 +63,24 @@ module Views
               h2 "ABOUT US"
 
               p do
-                text "Wursthall is a restaurant & bierhaus located in downtown San Mateo. We aim to bring the festivity and community of the German beerhall to the Bay Area, and hope to create a gathering space for friends and families."
+                text "Wursthall is a restaurant and bierhaus located in downtown San Mateo. 
+                We aim to bring the festivity and community of the German beer hall to the Bay Area, 
+                and hope to create a gathering space for friends and families."
                 br
                 br
-                text "San Mateo natives, Adam Simpson and Tyson Mao, have partnered with James Beard award winning chef Kenji López-Alt to deliver a German and Austrian inspired menu for your enjoyment. Our menu features sausage plates, XXX (crispy fried potatoes), and more. We are proud to partner with Anne and Robert Moser of Backhaus Bakery for our pretzels and buns."
+                text "San Mateo natives, Adam Simpson and Tyson Mao, have partnered with James Beard award winning 
+                chef Kenji López-Alt to deliver a German and Austrian inspired menu for your enjoyment. 
+                Our menu features wursts, bratkartoffeln (crispy fried potatoes), interesting sandwiches, and more. 
+                We are proud to partner with Anne and Robert Moser of Backhaus Bakery for our pretzels and buns."
                 br
                 br
-                text  "We feature 22 beers which include German and Belgian style ales and local craft brews. We also feature a selection of red and white wine on tap."
+                text "Our taps feature 28 beers from Germany and Belgium, as well as local craft brews. 
+                We also have a selection of California wines."
                 br
                 br
-                text "Whether it’s an outing with some colleagues, a drink with an old friend, or a family night out for dinner, we hope you come and enjoy our contribution to downtown San Mateo. If you see us around, don’t hesitate to say hello!"
+                text "Whether it’s an outing with some colleagues, a drink with an old friend, 
+                or a family night out for dinner, we hope you come and enjoy our contribution to downtown San Mateo. 
+                If you see us around, don’t hesitate to say hello!"
               end
 
 
@@ -205,6 +213,8 @@ module Views
     def render_map
       iframe width: "100%", height:"259", frameborder:"0", style:"border:0", scrolling: "no", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY", class: 'map'
     end
+
+
 
     def render_footer
       div class: 'footer' do
