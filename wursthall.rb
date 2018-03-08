@@ -61,5 +61,17 @@ class Wursthall < Roda
     r.is 'menu' do
       render('menu')
     end
+
+    r.is 'late' do
+      render('late_night')
+    end
+
+    r.is 'kids' do
+      render('kids')
+    end
+
+    r.is 'drinks' do
+      render('drinks')
+    end
   end
 end

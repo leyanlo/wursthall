@@ -62,6 +62,11 @@ module Views
           end
         end
 
+        all_items
+      end
+    end
+
+    def all_items
         div class: 'menu_food_items' do
           div class: 'menu_food_items_col' do
             h3 'APPETIZERS & SMALL PLATES'
@@ -98,7 +103,7 @@ module Views
 
             food_item("Plain ••", "Chives, mustard aioli", 7)
             food_item("Currywurst", "Blackened ginger curry, sausage, blistered mustard seed,
-					   mustard aioli", 9)            
+					   mustard aioli", 9)
             food_item("BACON & ONION", "Slow-cooked bacon, scallions, mustard aioli", 9)
 
             h3 'SANDWICHES'
@@ -116,7 +121,7 @@ module Views
             food_item("MERGUEZ", "Spicy lamb sausage, harissa aioli, arugula, red onions,
 					   cilantro, Turkish bread ", 18)
 
-            food_item("Impossible Döner Kebap ••", "Vegan döner, Turkish spices, döner sauce, 
+            food_item("Impossible Döner Kebap ••", "Vegan döner, Turkish spices, döner sauce,
             		   pickled cucumbers and chiles, arugula,cred onions, cilantro, Turkish bread", 19)
             food_item("BUTTERKÄSE GRILLED CHEESE •", "Sourdough, tomato soup dip", 13)
 
@@ -129,24 +134,24 @@ module Views
               hr
             end
 
-            p 'All wursts come on a top-split bun with mixed greens, house potato salad, and your choice of 
+            p 'All wursts come on a top-split bun with mixed greens, house potato salad, and your choice of
                a topping'
             p '$16'
 
             food_item('Bratwurst', 'Finely ground pork and veal, white pepper, onion','')
             food_item('THÜRINGER', 'Coarsely ground pork and veal, marjoram, brown caraway','')
             food_item('SHEBOYGAN', 'Pork, white pepper, celery seed, mace','')
-            food_item('FRANKFURTER', 'Veal and pork, smoked, extra-long','')           
+            food_item('FRANKFURTER', 'Veal and pork, smoked, extra-long','')
             food_item('CHICKEN & PORTOBELLO', 'Chicken (pork casing)','')
-            food_item('HOT ITALIAN', 'Pork, onions, garlic, fennel','')  
+            food_item('HOT ITALIAN', 'Pork, onions, garlic, fennel','')
             food_item('CAJUN', 'Pork, cayenne, black pepper, garlic','')
-            food_item('AL PASTOR', 'Pork, dried chiles, pineapple','')   
+            food_item('AL PASTOR', 'Pork, dried chiles, pineapple','')
 
             h3 'TOPPINGS'
             p 'Choice of one, additional toppings for $1 each'
 
             topping_item('Sauerkraut ••','')
-            topping_item('Grilled Onions ••','') 
+            topping_item('Grilled Onions ••','')
             topping_item('Speck-Cherry Pepper Relish','')
             topping_item('Sweet & Sour Peppers & Onions ••','')
 
@@ -164,9 +169,7 @@ module Views
             food_item('Pumpkin seed Sundae ••', 'Vanilla ice cream, pumpkin seed brittle, pumpkin seed oil, smoked sea salt','7')
 
           end
-
         end
-      end
     end
 
   end
