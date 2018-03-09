@@ -628,14 +628,26 @@ hr {
   width: 75%;
   margin: 7px 12.5%;
   background-color: #ffffff;
+  text-align: left;
+}
+
+.menu_food_items h3 {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0.3em;
+}
+
+.menu_food_items p {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 
 .menu_food_items_col {
   position: relative;
   display: inline-block;
   width: 48%;
-  padding-left: 1%;
+  padding: 1%;
   text-align: left;
+  vertical-align: top;
 }
 
 .menu_food_items_col h3 {
@@ -644,13 +656,6 @@ hr {
   letter-spacing: 1px;
 }
 
-.menu_food_items_right {
-  position: relative;
-  display: inline-block;
-  width: 49%;
-  text-align: left;
-  left: 1%;
-}
 
 .thick_line hr {
   width: 98%;
@@ -671,12 +676,13 @@ hr {
   font-size: 14px;
   font-family: 'Sofia Pro Regular';
   height: 18px;
+  width: 90%;
 }
 
 .item_description {
   position: relative;
   display: inline-block;
-  width: 94%;
+  width: 90%;
   font-size: 14px;
   font-family: 'Sofia Pro Light';
   height: 18px;
@@ -688,7 +694,62 @@ hr {
   font-size: 14px;
   font-family: 'Sofia Pro Light';
   height: 18px;
+  text-align: right;
+  width: 8%;
 }
+
+
+
+/*--------------DRINK PAGE--------------*/
+
+.drink_name {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Sofia Pro Regular';
+  height: 18px;
+  width: 38%;
+}
+
+.drink_style {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Sofia Pro Regular';
+  height: 18px;
+  width: 50%;
+}
+
+.maker_name {
+  position: relative;
+  display: inline-block;
+  width: 38%;
+  font-size: 14px;
+  font-family: 'Sofia Pro Light';
+  height: 18px;
+}
+
+.maker_location {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  font-size: 14px;
+  font-family: 'Sofia Pro Light';
+  height: 18px;
+}
+
+.drink_price {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-family: 'Sofia Pro Light';
+  height: 18px;
+  text-align: right;
+  width: 12%;
+}
+
 
 /*-------MOBILE--------*/
 
@@ -786,6 +847,16 @@ hr {
     top: 0%;
   }
 
-  hr {
+  fourth_section_content_right_hour hr {
     display: none;
   }
+}
+
+/*-------Menu Page--------*/
+@media only screen and (max-width: 1235px) and (min-width: 665px) {
+
+  .menu_food_items_col {
+  position: relative;
+  display: block;
+  width: 96%;
+}
