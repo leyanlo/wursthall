@@ -9,26 +9,36 @@ module Views
       ['KIDS', '/']
     ].freeze
 
-    def food_item(item_name, item_description, item_price)
+    def food_name(item_name, item_price)
       div class: 'item_name' do
         text item_name
       end
 
+      div class: 'item_price' do
+        text item_price
+      end
+    
+    def food_name1(item_name)
+      div class: 'item_name' do
+        text item_name
+      end
+     end
+
+    def food_desc(item_description)
+      div class: 'item_description' do
+        text item_description
+      end
+      br
+    end
+
+
+    def food_desc2(item_description, item_price)
       div class: 'item_description' do
         text item_description
       end
 
       div class: 'item_price' do
         text item_price
-      end
-
-    def food_item2(item_name, item_description)
-      div class: 'item_name' do
-        text item_name
-      end
-
-      div class: 'item_description' do
-        text item_description
       end
 
       end
@@ -90,44 +100,52 @@ module Views
 
             h3 'PRETZELS'
             p 'Bavarian pretzel served with black pepper honey butter'
-            br
-            food_item("TRADITIONAL •", "Classic pretzel for 1 to 2 people", '6')
-            br
-            br
-            food_item("PAIN D'EPI •", "Pull-apart pretzel for 3 to 4 people", '11')
-            br
-            br
-            add_item("Add Obatzda (Bavarian cheese spread) and pickles", '4')
-            br
-            br
 
+            br
+            food_name("TRADITIONAL •", '6')
+            br
+            food_desc("Classic pretzel for 1 to 2 people")
+            br
+            food_name("PAIN D'EPI •", "11")
+            br
+            food_desc("Pull-apart pretzel for 3 to 4 people")
+            br
+            food_desc2("Add Obatzda (Bavarian cheese spread) and pickles", "4")
+            br
+            br
             div class: 'thin_line' do
               hr
-            end
-
-            food_item2("DEVILED EGGS •", "Pastured egg, Aleppo pepper, dill, lots of mustard" )
-            add_item("2 Pieces", '4')
-            add_item("4 Pieces", '7')
+            end            
+            food_name('DEVILED EGGS •', '')
+            br
+            food_desc('Pastured egg, Aleppo pepper, dill, lots of mustard')
+            food_desc2('2 pieces', "4")
+            br
+            food_desc2('4 pieces', "7")
+            br                  
+            br     
+            food_name('HOUSE PICKLES ••', '6')
+            br
+            food_desc('Naturally fermented and quick pickled vegetables')
+            br
+            food_name('ROASTED BONE MARROW', '16')
+            br
+            food_desc('Parsley and cipollini onion salad, pickled mustard seed, grilled sourdough')
             br
             br
-            food_item("HOUSE PICKLES •", "Naturally fermented and quick pickled vegetables", '6')
+            food_name('BEETS & WHEATS ••', '14')
+            br
+            food_desc('Cucumber, celery, radish, bitter orange purée, almond ricotta, horseradish')
             br
             br
-            food_item("ROASTED BONE MARROW", "Parsley and cipollini onion salad, pickled mustard seed,
-					   grilled sourdough", '16')
+            food_name('GRILLED BROCCOLINI SALAD ••', '13')
             br
+            food_desc('Pumpkin seed vinaigrette, quark, egg, grilled lemon')
             br
-            food_item("BEETS & WHEATS ••", "Cucumber, celery, radish, bitter orange purée,
- 					   almond ricotta, horseradish", '14')
+            food_name('TOASTED PUMPKIN SEED SOUP ••', '9')
             br
+            food_desc('Pumpkin seed oil, sourdough croutons')
             br
-            food_item("GRILLED BROCCOLINI SALAD ••", "Pumpkin seed vinaigrette, quark, egg, grilled lemon", '13')
-            br
-            br
-            food_item("TOASTED PUMPKIN SEED SOUP ••", "Pumpkin seed oil, sourdough croutons", '9')
-            br
-            br
-
             div class: 'thin_line' do
               hr
             end
@@ -135,42 +153,45 @@ module Views
             h3 'BRATKARTOFFEN'
             p 'Crispy Fried Potatoes'
             br
-            food_item("Plain ••", "Chives, mustard aioli", 7)
+            food_name('Plain ••', '7')
+            br
+            food_desc('Chives, mustard aioli')
+            br
+            food_name('“Currywurst"', '9')
+            br
+            food_desc('Blackened ginger curry, sausage, blistered mustard seed, mustard aioli')
             br
             br
-            food_item("Currywurst", "Blackened ginger curry, sausage, blistered mustard seed,
-					   mustard aioli", 9)
+            food_name('BACON & ONION', '9')
             br
-            br
-            food_item("BACON & ONION", "Slow-cooked bacon, scallions, mustard aioli", 9)
-            br
+            food_desc('Slow-cooked bacon, scallions, mustard aioli')
             br
 
             h3 'SANDWICHES'
-
             div class: 'thick_line' do
               hr
-            end
-
+            end            
             p 'All sandwiches come with mixed greens and house potato salad'
             br
-            food_item("Chicken Schnitzel Sandwich", "Sauerkraut brine, marinated cucumber, cabbage,
-					   preserved lemon-caper aioli", 15)
+            food_name('Chicken Schnitzel Sandwich', '15')
+            br
+            food_desc('Sauerkraut brine, marinated cucumber, cabbage, preserved lemon-caper aioli')
             br
             br
-            food_item("NÜRNBERGER “DREI IM WECKLA”", "Thin pork sausages served three in a bun, sauerkraut,
-					   hot mustard", 16)
+            food_name('NÜRNBERGER “DREI IM WECKLA”', '16')
+            br
+            food_desc('Thin pork sausages served three in a bun, sauerkraut, hot mustard')
             br
             br
-            food_item("MERGUEZ", "Spicy lamb sausage, harissa aioli, arugula, red onions,
-					   cilantro, Turkish bread ", 18)
+            food_name('Impossible Döner Kebap ••', '19')
+            br
+            food_desc('Vegan döner, Turkish spices, döner sauce, pickled cucumbers and chiles, arugula, red onions, cilantro, Turkish bread')
             br
             br
-            food_item("Impossible Döner Kebap ••", "Vegan döner, Turkish spices, döner sauce,
-            		   pickled cucumbers and chiles, arugula,cred onions, cilantro, Turkish bread", 19)
+            food_name('BUTTERKÄSE GRILLED CHEESE •', '13')
             br
-            br
-            food_item("BUTTERKÄSE GRILLED CHEESE •", "Sourdough, tomato soup dip", 13)
+            food_desc('Sourdough, tomato soup dip')
+
 
           end
 
@@ -185,56 +206,61 @@ module Views
                a topping'
             p  '$16'
             br
-            food_item2('Bratwurst', 'Finely ground pork and veal, white pepper, onion')
-            br
-            br
-            food_item2('THÜRINGER', 'Coarsely ground pork and veal, marjoram, brown caraway')
-            br
-            br            
-            food_item2('SHEBOYGAN', 'Pork, white pepper, celery seed, mace')
-            br
-            br
-            food_item2('FRANKFURTER', 'Veal and pork, smoked, extra-long')
-            br
-            br
-            food_item2('CHICKEN & PORTOBELLO', 'Chicken (pork casing)')
-            br
-            br
-            food_item2('HOT ITALIAN', 'Pork, onions, garlic, fennel')
-            br
-            br
-            food_item2('CAJUN', 'Pork, cayenne, black pepper, garlic')
-            br
-            br
-            food_item2('AL PASTOR', 'Pork, dried chiles, pineapple')
 
+            food_name1('Bratwurst')
             br
+            food_desc('Finely ground pork and veal, white pepper, onion')
+            br
+            food_name1('THÜRINGER')
+            br
+            food_desc('Coarsely ground pork and veal, marjoram, brown caraway')
+            br
+            food_name1('SHEBOYGAN')
+            br
+            food_desc('Pork, white pepper, celery seed, mace')
+            br
+            food_name1('FRANKFURTER')
+            br
+            food_desc('Veal and pork, smoked, extra-long')
+            br
+            food_name1('CHICKEN & PORTOBELLO')
+            br
+            food_desc('Chicken (pork casing)')
+            br
+            food_name1('HOT ITALIAN')
+            br
+            food_desc('Pork, onions, garlic, fennel')
+	        br
+            food_name1('CAJUN')
+            br
+            food_desc('Pork, cayenne, black pepper, garlic')
+            br
+            food_name1('AL PASTOR')
+            br
+            food_desc('Pork, dried chiles, pineapple')
             br
 
             h3 'TOPPINGS'
             p 'Choice of one, additional toppings for $1 each'
             br
 
-            add_item('Sauerkraut ••','')
+            food_desc('Sauerkraut ••')
             br
+            food_desc('Grilled Onions ••')
             br
-            add_item('Grilled Onions ••','')
+            food_desc('Speck-Cherry Pepper Relish')
             br
+            food_desc('Sweet & Sour Peppers & Onions ••')
             br
-            add_item('Speck-Cherry Pepper Relish','')
-            br
-            br
-            add_item('Sweet & Sour Peppers & Onions ••','')
-            br
-            br
+
 
             div class: 'thin_line' do
               hr
             end
 
-            br
-            food_item('Sausage Party', 'Six sausages (chef’s selection), sauerkraut, potato salad','50')
-            br
+            food_name('Sausage Party', '50')
+            food_desc('Six sausages (chef’s selection), sauerkraut, potato salad')
+
             br
 
             h3 'DESSERT'
@@ -242,7 +268,8 @@ module Views
               hr
             end
 
-            food_item('Pumpkin seed Sundae ••', 'Vanilla ice cream, pumpkin seed brittle, pumpkin seed oil, smoked sea salt','7')
+            food_name('Pumpkin seed Sundae ••', '7')
+            food_desc('Vanilla ice cream, pumpkin seed brittle, pumpkin seed oil, smoked sea salt')
 
           end
         end

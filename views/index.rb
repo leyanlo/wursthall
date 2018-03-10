@@ -58,7 +58,7 @@ module Views
           div class: 'second_section_content' do
             div class: 'second_section_left' do
 
-              img src: '/images/stamp-1.png', class: 'big_stamp'
+              img src: '/images/big_stamp.png', class: 'big_stamp'
 
               h2 "ABOUT US"
 
@@ -84,7 +84,7 @@ module Views
               end
 
 
-              img src: '/images/stamp-2.png', class: 'small_stamp'
+              img src: '/images/small_stamp.png', class: 'small_stamp'
             end
 
             div class: 'second_section_right' do
@@ -96,16 +96,22 @@ module Views
     end
 
     def render_third_section
+      a name: 'menu' do
       div class: 'third_section' do
         div class: 'third_section_content' do
           h2 "MENU"
 
           p do
-            text "Lorem ipsum dolor sit amet, consul gloriatur at mel. At omnium expetendis pro. Persius detracto concludaturque id eos, nam alia euismod fabellas te, sed unum minimum lobortis eu. Utinam theophrastus no mel, nisl possit ne his, id dolor pertinacia his. Nulla scriptorem no mel. Volumus lobortis urbanitas mea te."
+            text "Gather with family and friends at Wursthall and enjoy Chef J. Kenji López-Alt's modern take of 
+                  German cuisine. Enjoy our in-house creations, including pickles, mustards, and sauerkraut, and 
+                  pretzels and breads from San Mateo's own Backhaus. The beer list is curated to give you a taste 
+                  of German, Belgian, and American beer styles (in the correct glassware, of course) while ciders, 
+                  wines, and other beverages give everyone a glass to raise. Our passionate staff can help you 
+                  select the perfect beverage to go with any dish or occasion."
             br
             br
-            text "Eu vis saperet oportere, labore putant molestiae his cu. Animal intellegat eu cum, postea cetero salutandi ad cum, lorem munere eos at. At nam veri melius, mea eu minimum delicatissimi. Id simul accusam phaedrum sed, tibique similique eu nam. An vel nobis eligendi vituperata. Sit ad vocent placerat honestatis, eu qui eirmod voluptatibus. Cu inermis accumsan duo, regione aliquid in vix. "
-            a 'Download Menu', href: '/'
+            text "Explore the menus to decide what you have to try first, 
+                  and we hope you will return to experience everything Wursthall has to offer!"
           end
 
           div class: 'third_section_menu' do
@@ -136,6 +142,7 @@ module Views
         end
       end
     end
+  end
 
     def render_fourth_section
       div class: 'fourth_section' do

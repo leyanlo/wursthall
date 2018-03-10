@@ -102,7 +102,7 @@ module Views
     def all_items
          div class: 'menu_food_items' do
 
-          div class: 'menu_food_items_col' do
+          div class: 'drink_items_col' do
             h3 'BEERS ON TAP'
 
             div class: 'thick_line' do
@@ -216,7 +216,7 @@ module Views
 			drink_item2('Rodenbach', 'Roeselare, BEL', '25cl')
         end
 
-          div class: 'menu_food_items_col' do
+          div class: 'drink_items_col' do
             h3 'WEIN'
 
             div class: 'thick_line' do
@@ -257,9 +257,12 @@ module Views
 			div class: 'nonalc_col' do
 				nonalc('MEXICAN COKE', '4')
 				br
+				br
 				nonalc('BOYLAN’S DIET COLA', '4')
 				br
+				br
 				nonalc('ICED TEA', '4')
+				br
 				br
 				nonalc('TOPO CHICO MINERAL WATER (SPARKLING)', '4')
 			end
@@ -267,9 +270,12 @@ module Views
 			div class: 'nonalc_col' do
 				nonalc('BUBBLE UP', '4')
 				br
+				br
 				nonalc('MEZZO MIX', '4')
 				br
+				br
 				nonalc('IKON COLD BREW COFFEE', '4')
+				br
 				br
 				nonalc('MOUNTAIN VALLEY SPRING WATER (STILL)', '4')
 			end
