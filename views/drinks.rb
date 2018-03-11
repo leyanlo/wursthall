@@ -101,14 +101,15 @@ module Views
 
     def all_items
          div class: 'menu_food_items' do
-
+         	br
           div class: 'drink_items_col' do
+            
             h3 'BEERS ON TAP'
 
             div class: 'thick_line' do
               hr
             end
-
+            br
             p 'Come by Wursthall to check out the weekly rotational taps'
             br
 
@@ -216,8 +217,8 @@ module Views
 			drink_item2('Rodenbach', 'Roeselare, BEL', '25cl')
         end
 
-          div class: 'drink_items_col' do
-            h3 'WEIN'
+        div class: 'drink_items_col' do
+          h3 'WEIN'
 
             div class: 'thick_line' do
               hr
@@ -266,6 +267,8 @@ module Views
 				br
 				nonalc('TOPO CHICO MINERAL WATER (SPARKLING)', '4')
 			end
+
+			div class: 'nonalc_div'
 
 			div class: 'nonalc_col' do
 				nonalc('BUBBLE UP', '4')
