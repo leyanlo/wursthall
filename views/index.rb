@@ -150,7 +150,11 @@ module Views
           a name: 'contact' do
             div class: 'fourth_section_content_left' do
               h2 "CONTACT US"
-              p 'Have a question or a comment? Let us know how we can help.'
+              p do 
+                text 'Have a question or a comment?'
+                br
+                text 'We are currently not taking reservations.'
+              end
 
               render_form
             end
@@ -201,15 +205,15 @@ module Views
         br
         input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
         br
-        input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
-        input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
-        br
-        input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
-        br
-        input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
-        input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
-        br
-        textarea type: 'textarea', name: 'description', placeholder: 'TELL US ABOUT YOUR EVENT...', class: 'form_textarea'
+#        input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_1line'
+#        input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
+#        br
+#        input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
+#        br
+#        input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
+#        input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
+ #       br
+        textarea type: 'textarea', name: 'description', placeholder: 'LET US KNOW HOW WE CAN HELP...', class: 'form_textarea'
         br
         button type: 'submit', class: 'submitbutton' do
           text "SUBMIT"
