@@ -449,7 +449,7 @@ input[type=text] {
   text-align: top;
   background-color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Medium';
   font-weight: 500;
   resize: none;
 }
@@ -461,7 +461,7 @@ input[type=text] {
   border: solid 1px #ffffff;
 
   font-size: 14px;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Medium';
   color: rgba(0, 0, 0, 0.25);
   font-weight: 500;
 }
@@ -483,7 +483,7 @@ hr {
 
 .fourth_section_content_right_hour h3 {
   color: #ffffff;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Medium';
   font-size: 14px;
   font-weight: normal;
   line-height: 10px;
@@ -492,7 +492,7 @@ hr {
 
 .fourth_section_content_right_hour h4 {
   color: #ffffff;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Medium';
   font-size: 14px;
   font-weight: normal;
   line-height: 10px;
@@ -597,7 +597,7 @@ hr {
   padding: 12px 60px;
 
   font-size: 14px;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Medium';
   color: #000000;
 
 }
@@ -614,7 +614,7 @@ hr {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Medium';
 
 
   margin-top: 20px;
@@ -632,7 +632,7 @@ hr {
 .menu_food li a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
-  font-family: 'Brandon Grotesque';
+  font-family: 'Brandon Grotesque Medium';
   letter-spacing: 1px;
 }
 
@@ -884,7 +884,7 @@ hr {
   }
 
   .fourth_section_content_right_hour h3 {
-    font-family: 'Brandon Grotesque';
+    font-family: 'Brandon Grotesque Medium';
     font-size: 36px;
     letter-spacing: 0.2px;
     font-weight: normal;
