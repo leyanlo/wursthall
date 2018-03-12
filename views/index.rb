@@ -228,7 +228,7 @@ module Views
         p do
           text "Wursthall 2018. All Rights Reserved"
           br
-          text "310 Baldwin ave., San Mateo, CA 94401 • 650-305-1504"
+          text "310 Baldwin ave., San Mateo, CA 94401 • 650-931-4282"
         end
 
         a href: 'https://www.facebook.com/wursthall/' do
