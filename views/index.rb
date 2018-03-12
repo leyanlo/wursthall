@@ -117,11 +117,11 @@ module Views
             div class: 'third_section_menu_col' do
 
               div class: 'menu_main' do
-                a 'MAIN', href: '/'
+                a 'MAIN', href: '/images/wursthall_main.pdf'
               end
 
               div class: 'menu_drinks' do
-                a 'DRINKS', href: '/'
+                a 'DRINKS', href: '/images/wh_menu_drinks.pdf'
               end
 
             end
@@ -129,11 +129,11 @@ module Views
             div class: 'third_section_menu_col' do
 
               div class: 'menu_latenight' do
-                a 'LATE NIGHT', href: '/'
+                a 'LATE NIGHT', href: '/images/wursthall_latenight.pdf'
               end
 
               div class: 'menu_kids' do
-                a 'KIDS', href: '/'
+                a 'KIDS', href: '/images/wursthall_kidsmenu.pdf'
               end
 
             end
