@@ -62,7 +62,7 @@ class Wursthall < Roda
       render('menu')
     end
 
-    r.is 'late' do
+    r.is 'latenight' do
       render('late_night')
     end
 
@@ -72,6 +72,45 @@ class Wursthall < Roda
 
     r.is 'drinks' do
       render('drinks')
+    end
+
+    r.on 'event' do
+      r.post do
+        send_mail(
+          name: r['name'],
+          email: r['email'],
+          phone: r['phone'],
+          company: r['company'],
+          partysize: r['partysize'],
+          eventdate: r['eventdate'],
+          starttime: r['starttime'],
+          endtime: r['endtime'],
+          description: r['description'],
+        )
+        flash[:flash] = 'Event Inquiry Sent!'
+        r.redirect '/'
+      end
+    end
+  end
+
+  def send_mail(params)
+    uri = URI.parse('https://api.sparkpost.com/api/v1/transmissions')
+    req = Net::HTTP::Post.new(uri)
+    req.content_type = 'application/json'
+    req['Authorization'] = ENV['SPARK_POST_KEY']
+    req.body = JSON.dump(
+      'content' => {
+        'from' => 'no-reply@wursthall.com',
+        'subject' => "Event Submission #{Time.now}",
+        'html' => Views::Email.new(**params).to_html,
+      },
+      'recipients' => [
+        { address: 'info@wursthall.com' }
+      ]
+    )
+
+    Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) do |http|
+      http.request(req)
     end
   end
 end

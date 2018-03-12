@@ -12,7 +12,6 @@ module Views
 
     def render_nav
       div class: 'nav_container' do
-
         ul class: 'menu' do
           NAV_ITEMS.each do |name, link|
             case name
@@ -63,23 +62,23 @@ module Views
               h2 "ABOUT US"
 
               p do
-                text "Wursthall is a restaurant and bierhaus located in downtown San Mateo. 
-                We aim to bring the festivity and community of the German beer hall to the Bay Area, 
+                text "Wursthall is a restaurant and bierhaus located in downtown San Mateo.
+                We aim to bring the festivity and community of the German beer hall to the Bay Area,
                 and hope to create a gathering space for friends and families."
                 br
                 br
-                text "San Mateo natives, Adam Simpson and Tyson Mao, have partnered with James Beard award winning 
-                chef Kenji López-Alt to deliver a German and Austrian inspired menu for your enjoyment. 
-                Our menu features wursts, bratkartoffeln (crispy fried potatoes), interesting sandwiches, and more. 
+                text "San Mateo natives, Adam Simpson and Tyson Mao, have partnered with James Beard award winning
+                chef Kenji López-Alt to deliver a German and Austrian inspired menu for your enjoyment.
+                Our menu features wursts, bratkartoffeln (crispy fried potatoes), interesting sandwiches, and more.
                 We are proud to partner with Anne and Robert Moser of Backhaus Bakery for our pretzels and buns."
                 br
                 br
-                text "Our taps feature 28 beers from Germany and Belgium, as well as local craft brews. 
+                text "Our taps feature 28 beers from Germany and Belgium, as well as local craft brews.
                 We also have a selection of California wines."
                 br
                 br
-                text "Whether it’s an outing with some colleagues, a drink with an old friend, 
-                or a family night out for dinner, we hope you come and enjoy our contribution to downtown San Mateo. 
+                text "Whether it’s an outing with some colleagues, a drink with an old friend,
+                or a family night out for dinner, we hope you come and enjoy our contribution to downtown San Mateo.
                 If you see us around, don’t hesitate to say hello!"
               end
 
@@ -88,7 +87,7 @@ module Views
             end
 
             div class: 'second_section_right' do
-              img src: '/images/aboutus-imgs.png', class: 'aboutus_image'
+              img src: '/images/aboutus-imgs.jpg', class: 'aboutus_image'
             end
           end
         end
@@ -102,15 +101,15 @@ module Views
           h2 "MENU"
 
           p do
-            text "Gather with family and friends at Wursthall and enjoy Chef J. Kenji López-Alt's modern take of 
-                  German cuisine. Enjoy our in-house creations, including pickles, mustards, and sauerkraut, and 
-                  pretzels and breads from San Mateo's own Backhaus. The beer list is curated to give you a taste 
-                  of German, Belgian, and American beer styles (in the correct glassware, of course) while ciders, 
-                  wines, and other beverages give everyone a glass to raise. Our passionate staff can help you 
+            text "Gather with family and friends at Wursthall and enjoy Chef J. Kenji López-Alt's modern take of
+                  German cuisine. Enjoy our in-house creations, including pickles, mustards, and sauerkraut, and
+                  pretzels and breads from San Mateo's own Backhaus. The beer list is curated to give you a taste
+                  of German, Belgian, and American beer styles (in the correct glassware, of course) while ciders,
+                  wines, and other beverages give everyone a glass to raise. Our passionate staff can help you
                   select the perfect beverage to go with any dish or occasion."
             br
             br
-            text "Explore the menus to decide what you have to try first, 
+            text "Explore the menus to decide what you have to try first,
                   and we hope you will return to experience everything Wursthall has to offer!"
           end
 
@@ -194,7 +193,8 @@ module Views
     end
 
     def render_form
-      form method: 'post' do
+      form action: 'event', method: 'post' do
+        rawtext csrf_tag
         input type: 'text', name: 'name', placeholder: 'NAME', class: 'form_1line'
         br
         input type: 'text', name: 'email', placeholder: 'E-MAIL', class: 'form_1line'
