@@ -166,17 +166,17 @@ module Views
 
                 div class: 'service_hour1' do
                   p do
-                    text 'Main Menu'
+                    text 'Lunch'
                     br
-                    text 'Late Night Menu'
+                    text 'Dinner'
                   end
                 end
 
                 div class: 'service_hour2' do
                   p do
-                    text '11:00 AM - 9:30 PM'
+                    text 'TBA'
                     br
-                    text '9:30 PM - 12:00 AM'
+                    text '5:00 PM - 12:00 AM'
 
                   end
 
