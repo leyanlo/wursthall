@@ -12,7 +12,6 @@ before 'deploy', 'rvm1:install:gems'
 
 after 'deploy:restart', 'deploy:cleanup'
 after 'deploy', 'deploy:copy'
-after 'deploy', 'deploy:migrate'
 
 namespace :deploy do
   desc 'Rolling restart'
@@ -45,14 +44,6 @@ namespace :deploy do
   task :copy do
     on roles :all do
       upload! '.env.rb', fetch(:current_dir)
-    end
-  end
-
-  task :migrate do
-    on roles :all do
-      within fetch(:current_dir) do
-        execute :bundle, 'exec rake prod_up'
-      end
     end
   end
 end
