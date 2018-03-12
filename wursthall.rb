@@ -37,7 +37,7 @@ class Wursthall < Roda
 
   unless PRODUCTION
     opts[:root] = Dir.pwd
-    plugin :static, %w[/fonts /images], root: 'public/assets/'
+    plugin :static, %w[/fonts /images], root: 'public/'
     use BetterErrors::Middleware
     BetterErrors.application_root = __dir__
   end
