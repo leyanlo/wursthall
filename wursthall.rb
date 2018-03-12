@@ -40,8 +40,9 @@ class Wursthall < Roda
     plugin :static, %w[/fonts /images], root: 'public/assets/'
     use BetterErrors::Middleware
     BetterErrors.application_root = __dir__
-    compile_assets
   end
+
+  compile_assets
 
   status_handler 403 do
     'You are forbidden from seeing that!'
