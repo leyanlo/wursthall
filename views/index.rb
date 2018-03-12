@@ -226,7 +226,7 @@ module Views
     def render_footer
       div class: 'footer' do
         p do
-          text "Wursthall 2017. All Rights Reserved"
+          text "Wursthall 2018. All Rights Reserved"
           br
           text "310 Baldwin ave., San Mateo, CA 94401 • 650-305-1504"
         end
