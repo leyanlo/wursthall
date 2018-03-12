@@ -24,10 +24,10 @@ module Views
                 li { a 'MENU', href: '#menu' }
 
                 div class: 'dropdown-content' do
-                  a 'MAIN', href: '/', class: 'nav_link'
-                  a 'DRINKS', href: '/', class: 'nav_link'
-                  a 'LATE NIGHT', href: '/', class: 'nav_link'
-                  a 'KIDS', href: '/', class: 'nav_link'
+                  a 'MAIN', href: '/images/wursthall_main.pdf', class: 'nav_link'
+                  a 'DRINKS', href: '/images/wh_menu_drinks.pdf', class: 'nav_link'
+                  a 'LATE NIGHT', href: '/images/wursthall_latenight.pdf', class: 'nav_link'
+                  a 'KIDS', href: '/images/wursthall_kidsmenu.pdf', class: 'nav_link'
                 end
               end
             else
