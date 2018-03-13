@@ -88,7 +88,7 @@ class Wursthall < Roda
           endtime: r['endtime'],
           description: r['description'],
         )
-        flash[:flash] = 'Event Inquiry Sent!'
+        flash[:flash] = 'Thank you! Your message has been sent.'
         r.redirect '/'
       end
     end

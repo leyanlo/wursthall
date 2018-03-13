@@ -30,7 +30,10 @@ module Views
         title "#{page_title} | Wursthall"
       else
         title 'Wursthall | Restaurant & Bierhaus'
-        meta name: 'description', content: 'Wursthall: a German/Austrian-style bierhall by Kenji López-Alt in Dowtown San Mateo'
+        meta name: 'description', content: 'Wursthall is a restaurant and bierhall by James Beard award winning 
+        chef J. Kenji López-Alt in Downtown San Mateo. Our German and Austrian inspired menu features wursts, 
+        bratkartoffeln (crispy fried potatoes), interesting sandwiches, and more. Join us for an outing with 
+        some colleagues, a drink with an old friend, or a family night out for dinner.'
       end
     end
 
