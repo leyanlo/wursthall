@@ -30,7 +30,7 @@ module Views
         title "#{page_title} | Wursthall"
       else
         title 'Wursthall | Restaurant & Bierhaus'
-        meta name: 'description', content: 'Coming Soon - Wursthall: a German/Austrian-style bierhall by Kenji López-Alt in Dowtown San Mateo'
+        meta name: 'description', content: 'Wursthall: a German/Austrian-style bierhall by Kenji López-Alt in Dowtown San Mateo'
       end
     end
 
