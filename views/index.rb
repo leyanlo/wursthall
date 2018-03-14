@@ -96,6 +96,7 @@ module Views
 
     def render_third_section
       a name: 'menu' do
+      end
       div class: 'third_section' do
         div class: 'third_section_content' do
           h2 "MENU"
@@ -141,7 +142,7 @@ module Views
         end
       end
     end
-  end
+  
 
     def render_fourth_section
       div class: 'fourth_section' do

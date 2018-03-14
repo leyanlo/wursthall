@@ -61,6 +61,7 @@ a {
   background-color: lightsalmon;
   text-align: center;
   font-weight: bold;
+  font-family: 'Brandon Grotesque Regular';
   font-size: 18px;
   padding: 5px;
 }
@@ -69,9 +70,10 @@ a {
   background-color: #baa965;
   text-align: center;
   font-weight: bold;
-  font-family: 'Brandon Grotesque Regular'
+  font-family: 'Brandon Grotesque Regular';
   font-size: 18px;
   padding: 5px;
+  height: 100px;
 }
 
 .nav_container {
@@ -323,10 +325,32 @@ a {
 
 .menu_main a {
   line-height: 130px;
+  padding: 55px 42px;
 }
 
 .menu_main:hover {
   background-image: url('/images/main_on.jpg');
+  width: 130px;
+  height: 130px;
+  margin: 24px;
+}
+
+.menu_drinks a {
+  line-height: 130px;
+  padding: 55px 32px;
+}
+
+.menu_drinks {
+  background-image: url('/images/drinks_off.jpg');
+  position: relative;
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin: 24px;
+}
+
+.menu_drinks:hover {
+  background-image: url('/images/drinks_on.jpg');
 }
 
 .menu_latenight {
@@ -341,6 +365,7 @@ a {
 
 .menu_latenight a {
   line-height: 130px;
+  padding: 55px 11px;
 }
 
 
@@ -359,28 +384,14 @@ a {
 
 .menu_kids a {
   line-height: 130px;
+  padding: 55px 47px;
 }
 
 .menu_kids:hover {
   background-image: url('/images/kids_on.jpg');
 }
 
-.menu_drinks a {
-  line-height: 130px;
-}
 
-.menu_drinks {
-  background-image: url('/images/drinks_off.jpg');
-  position: relative;
-  display: inline-block;
-  width: 130px;
-  height: 130px;
-  margin: 24px;
-}
-
-.menu_drinks:hover {
-  background-image: url('/images/drinks_on.jpg');
-}
 
 /* ------ fourth section------*/
 
