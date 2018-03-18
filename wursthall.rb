@@ -95,6 +95,8 @@ class Wursthall < Roda
   end
 
   def send_mail(params)
+    return if params.values.compact.empty?
+
     uri = URI.parse('https://api.sparkpost.com/api/v1/transmissions')
     req = Net::HTTP::Post.new(uri)
     req.content_type = 'application/json'
