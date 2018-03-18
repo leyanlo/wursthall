@@ -8,7 +8,8 @@ module Views
       html do
         head do
           render_analytics
-          link rel: 'shortcut icon', type: 'image/png', href: '/images/favicon.ico'
+          link rel: 'shortcut icon', type: 'image/png', href: '/images/favicon-16x16.png', sizes: '16x16'
+          link rel: 'shortcut icon', type: 'image/png', href: '/images/favicon-32x32.png', sizes: '32x32'
           rawtext assets(:css)
           render_head
           meta name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0'
@@ -30,9 +31,9 @@ module Views
         title "#{page_title} | Wursthall"
       else
         title 'Wursthall | Restaurant & Bierhaus'
-        meta name: 'description', content: 'Wursthall is a restaurant and bierhall by James Beard award winning 
-        chef J. Kenji López-Alt in Downtown San Mateo. Our German and Austrian inspired menu features wursts, 
-        bratkartoffeln (crispy fried potatoes), interesting sandwiches, and more. Join us for an outing with 
+        meta name: 'description', content: 'Wursthall is a restaurant and bierhall by James Beard award winning
+        chef J. Kenji López-Alt in Downtown San Mateo. Our German and Austrian inspired menu features wursts,
+        bratkartoffeln (crispy fried potatoes), interesting sandwiches, and more. Join us for an outing with
         some colleagues, a drink with an old friend, or a family night out for dinner.'
       end
     end
