@@ -168,12 +168,23 @@ a {
   padding-bottom: 7%;
 }
 
+.announcement p {
+  top: 125px;
+  background-color: #baa965;
+  -webkit-margin-before: 0em;
+  font-weight: bold;
+  font-family: 'Brandon Grotesque Regular';
+  font-size: 16px;
+  padding: 20px;
+}
+
 .big_image {
   width: 50%;
   min-width: 256px;
   height: auto;
   position: relative;
-  top: 260px;
+  /*top: 260px;*/
+  top: 180px;
 }
 
 
