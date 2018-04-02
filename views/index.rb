@@ -49,11 +49,11 @@ module Views
     def render_first_section
       div class: 'first_section' do   
 
-      div class: 'announcement' do
-        p do 
-         text 'WE WILL BE CLOSED ON APRIL 1, 2018.'
-        end
-      end
+ #     div class: 'announcement' do
+  #      p do 
+  #       text 'WE WILL BE CLOSED ON APRIL 1, 2018.'
+   #     end
+   #   end
 
         img src: '/images/icon-wursthall.svg', class: 'big_image'
       end
