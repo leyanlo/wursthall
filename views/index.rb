@@ -162,7 +162,7 @@ module Views
               p do 
                 text 'Have a question or a comment?'
                 br
-                text 'We are currently not taking reservations.'
+#                text 'We are currently not taking reservations.'
               end
 
               render_form
@@ -214,13 +214,13 @@ module Views
         br
         input type: 'text', name: 'phone', placeholder: 'PHONE', class: 'form_1line'
         br
-#        input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_1line'
-#        input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
-#        br
-#        input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
-#        br
-#        input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
-#        input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
+ #       input type: 'text', name: 'company', placeholder: 'COMPANY', class: 'form_2line'
+ #       input type: 'text', name: 'partysize', placeholder: 'PARTY SIZE', class: 'form_2line'
+ #       br
+ #       input type: 'text', name: 'eventdate', placeholder: 'EVENT DATE', class: 'form_1line'
+ #       br
+ #       input type: 'text', name: 'starttime', placeholder: 'START TIME', class: 'form_2line'
+ #       input type: 'text', name: 'endtime', placeholder: 'END TIME', class: 'form_2line'
  #       br
         textarea type: 'textarea', name: 'description', placeholder: 'LET US KNOW HOW WE CAN HELP...', class: 'form_textarea'
         br
