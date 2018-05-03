@@ -653,6 +653,9 @@ hr {
   display: inline-block;
   margin: 0px;
   width: 18%;
+  border-bottom-color: #baa965;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
 }
 
 .menu_food li a {
