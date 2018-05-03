@@ -593,7 +593,7 @@ hr {
   position: relative;
   display: inline-block;
   text-align: left;
-  width: 37.5%;
+  width: 15%;
   padding-left: 12.5%;
 
   line-height: 50px;
@@ -609,7 +609,7 @@ hr {
   position: relative;
   display: inline-block;
   text-align: right;
-  width: 37.5%;
+  width: 60%;
   padding-right: 12.5%;
 }
 
@@ -681,6 +681,7 @@ hr {
 
 .veg{
   padding-left: 2%;
+  padding-right: 2%;
   padding-bottom: 7px;
 }
 
@@ -824,6 +825,7 @@ hr {
   font-family: 'Sofia Pro Light';
   height: 18px;
   text-align: right;
+  vertical-align: top;
   width: 10%;
 }
 
@@ -933,6 +935,23 @@ hr {
     width: 96%;
   }
 
+  .menu_container {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.menu_food_items {
+  width: 100%;
+  margin: 0;
+}
+
+.menu_food li {
+  display: inline-block;
+  margin: 0px;
+  width: 25%;
+}
+
 
 }
 
@@ -950,11 +969,11 @@ hr {
 
 @media only screen and (max-width: 665px) {
 
-  .menu_food_items_col {
+/*  .menu_food_items_col {
     position: relative;
     display: block;
     width: 96%;
-  }
+  }*/
 
   .drink_items_col {
     display: block;

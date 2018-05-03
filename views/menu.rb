@@ -3,10 +3,10 @@ require './views/page'
 module Views
   class Menu < Page
     MENU_ITEMS = [
-      ['MAIN', '/'],
-      ['DRINKS', 'menu'],
-      ['LATE NIGHT', '/'],
-      ['KIDS', '/']
+      ['MAIN', 'menu'],
+      ['DRINKS', 'drinks'],
+      ['LATE NIGHT', 'latenight'],
+      ['KIDS', 'kids']
     ].freeze
 
     def food_name(item_name, item_price)
@@ -115,7 +115,7 @@ module Views
           food_desc("Pull-apart pretzel for 3 to 4 people")
           br
           br
-          food_desc2("Add Obatzda (Bavarian cheese spread) and pickles", "4")
+          food_desc2("Add Obatzda (Bavarian cheese spread) and pickles •", "4")
           br
           br
           div class: 'thin_line' do
@@ -141,17 +141,17 @@ module Views
           br
           food_name('BEETS & WHEATS ••', '14')
           br
-          food_desc('Cucumber, celery, radish, bitter orange purée, almond ricotta, horseradish')
+          food_desc('Roasted beets, wheatberries, cucumber, celery, radish, bitter orange purée, almond ricotta, horseradish')
           br
           br
-          food_name('GRILLED BROCCOLINI SALAD ••', '13')
+          food_name('Spring Vegetable Salad ••', '13')
           br
-          food_desc('Pumpkin seed vinaigrette, quark, egg, grilled lemon')
+          food_desc('Spring vegetables, pea shoots, pickled red onion, quark, mint, toasted pumpkin seeds, lemon vinaigrette')
           br
           br
-          food_name('TOASTED PUMPKIN SEED SOUP ••', '9')
+          food_name('Asparagus, Potato & Sauerkraut Soup ••', '9')
           br
-          food_desc('Pumpkin seed oil, sourdough croutons')
+          food_desc('Snap peas, tarragon, pistachios, lemon oil')
           br
           br
           div class: 'thin_line' do
@@ -173,7 +173,7 @@ module Views
           br
           food_name('BACON & ONION', '9')
           br
-          food_desc('Slow-cooked bacon, scallions, mustard aioli')
+          food_desc('Slow-cooked rosemary bacon, scallions, mustard aioli')
           br
           br
 
@@ -183,7 +183,7 @@ module Views
           end
           p 'All sandwiches come with mixed greens and house potato salad'
           br
-          food_name('Chicken Schnitzel Sandwich', '15')
+          food_name('Chicken Schnitzel Sandwich', '18')
           br
           food_desc('Sauerkraut brine, marinated cucumber, cabbage, preserved lemon-caper aioli')
           br
@@ -200,7 +200,7 @@ module Views
           br
           food_name('Impossible Döner Kebap ••', '19')
           br
-          food_desc('Vegan döner, Turkish spices, döner sauce, pickled cucumbers and chiles, arugula, red onions, cilantro, Turkish bread')
+          food_desc('Vegan döner, Turkish spices, döner sauce, pickled cucumbers, pickled chiles, arugula, red onions, cilantro, Turkish bread')
           br
           br
           food_name('BUTTERKÄSE GRILLED CHEESE •', '13')
@@ -221,19 +221,24 @@ module Views
           p  '$16'
           br
 
-          food_name1('Bratwurst')
-          br
-          food_desc('Finely ground pork and veal, white pepper, onion')
-          br
-          br
-          food_name1('THÜRINGER')
+          food_name1('THÜRINGER Bratwurst')
           br
           food_desc('Coarsely ground pork and veal, marjoram, brown caraway')
           br
           br
-          food_name1('SHEBOYGAN')
+          food_name1('Cheddar Bratwurst')
           br
-          food_desc('Pork, white pepper, celery seed, mace')
+          food_desc('Pork, veal, black pepper, cheddar cheese') 
+          br
+          br
+          food_name1('Traditional Bratwurst')
+          br
+          food_desc('Finely ground pork and veal, white pepper, onion')  
+          br
+          br
+          food_name1('HOT ITALIAN')
+          br
+          food_desc('Pork, onions, garlic, fennel')                           
           br
           br
           food_name1('FRANKFURTER')
@@ -243,17 +248,12 @@ module Views
           br
           food_name1('CHICKEN & PORTOBELLO')
           br
-          food_desc('Chicken (pork casing)')
+          food_desc('Chicken, garlic (pork casing)')
           br
           br
-          food_name1('HOT ITALIAN')
+          food_name1('WILD BOAR')
           br
-          food_desc('Pork, onions, garlic, fennel')
-          br
-          br
-          food_name1('CAJUN')
-          br
-          food_desc('Pork, cayenne, black pepper, garlic')
+          food_desc('Pork, marjoram, caraway, wine-soaked currants')
           br
           br
           food_name1('AL PASTOR')
@@ -268,10 +268,11 @@ module Views
           food_desc('Sauerkraut ••')
           br
           br
+          food_desc('Speck-Cherry Pepper Relish')  
+          br
+          br                  
           food_desc('Grilled Onions ••')
-          br
-          br
-          food_desc('Speck-Cherry Pepper Relish')
+
           br
           br
           food_desc('Sweet & Sour Peppers & Onions ••')

@@ -3,10 +3,10 @@ require './views/menu'
 module Views
   class Drinks < Menu
     MENU_ITEMS = [
-      ['MAIN', '/'],
-      ['DRINKS', 'menu'],
-      ['LATE NIGHT', '/'],
-      ['KIDS', '/']
+      ['MAIN', 'menu'],
+      ['DRINKS', 'drinks'],
+      ['LATE NIGHT', 'latenight'],
+      ['KIDS', 'kids']
     ].freeze
 
     def drink_item1(drink_name, drink_style, drink_price)
