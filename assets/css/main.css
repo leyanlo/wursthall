@@ -671,6 +671,9 @@ hr {
   margin: 0px 12.5%;
   background-color: #ffffff;
   text-align: left;
+  border-bottom-color: #f2efe3;
+  border-bottom-width: 50px;
+  border-bottom-style: solid;  
 }
 
 .menu_food_items h3 {
@@ -951,7 +954,11 @@ hr {
 .menu_food_items {
   width: 100%;
   margin: 0;
+  border-bottom-color: #ffffff;
+  border-bottom-width: 50px;
+  border-bottom-style: solid;
 }
+
 
 .menu_food li {
   display: inline-block;

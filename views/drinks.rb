@@ -219,6 +219,8 @@ module Views
           br
           drink_item1('GRAND CRU', 'Flanders Sour Red Ale / 6.0%', '10')
           drink_item2('Rodenbach', 'Roeselare, BEL', '25cl')
+          br
+          br
         end
 
         div class: 'drink_items_col' do
@@ -285,6 +287,9 @@ module Views
             br
             br
             nonalc('MOUNTAIN VALLEY SPRING WATER (STILL)', '4')
+            br
+            br
+            br
           end
 
 

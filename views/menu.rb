@@ -304,6 +304,7 @@ module Views
           br
           br
         end
+
       end
     end
 
