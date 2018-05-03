@@ -83,6 +83,10 @@ module Views
 
           div class: 'menu_title_right' do
             a 'DOWNLOAD MENU', href: '/', class: 'menu_download_button'
+
+            a href: '/' do
+            img src: '/images/download-icon.svg', class: 'download_icon' 
+            end              
           end
         end
 

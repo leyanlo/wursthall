@@ -66,6 +66,11 @@ module Views
 
           div class: 'menu_title_right' do
             a 'DOWNLOAD MENU', href: '/', class: 'menu_download_button'
+
+            a href: '/' do
+            img src: '/images/download-icon.svg', class: 'download_icon' 
+            end  
+
           end
         end
 
@@ -153,7 +158,7 @@ module Views
           br
           food_desc('Pork, dried chiles, pineapple')
           br
-
+          br
   
         end
  
@@ -192,7 +197,9 @@ module Views
 
         div class: 'menu_food_items_col' do
           food_name('Pumpkin seed Sundae ••', '7')
-          food_desc('Vanilla ice cream, pumpkin seed brittle, pumpkin seed oil, smoked sea salt')          
+          food_desc('Vanilla ice cream, pumpkin seed brittle, pumpkin seed oil, smoked sea salt') 
+          br
+          br         
         end
 
 

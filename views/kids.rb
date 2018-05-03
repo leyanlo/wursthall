@@ -66,6 +66,11 @@ module Views
 
           div class: 'menu_title_right' do
             a 'DOWNLOAD MENU', href: '/', class: 'menu_download_button'
+
+              a href: '/' do
+            img src: '/images/download-icon.svg', class: 'download_icon' 
+            end  
+                      
           end
         end
 
@@ -147,34 +152,43 @@ module Views
           food_desc('Asparagus, snap peas, and pea shoots')
           br
           br
-        end
- 
-        div class: 'menu_food_items_col' do
+
           h3 'DRINKS'		
           div class: 'thick_line' do
             hr
           end
 
-          food_name('Apple Juice', '2')
+          p '$2 Each'
+          br
+          food_name1('Apple Juice')
           br
           br
-          food_name('Milk', '2')
+          food_name1('Milk')
           br
           br
+
+        end
+ 
+        div class: 'menu_food_items_col' do
+
 
           h3 'DESSERTS'		
           div class: 'thick_line' do
             hr
           end
 
-          food_name('Kinder Sundae •', '4')
+          p '$4 Each'
+          br
+          food_name1('Kinder Sundae •')
           br
           food_desc('1 scoop of vanilla ice cream with pumpkin seed brittle')
           br
           br
-          food_name('Mixed Berries ••', '4')
+          food_name1('Mixed Berries ••')
           br
           food_desc('Mixed fresh berries')
+          br
+          br
         end	
 
 

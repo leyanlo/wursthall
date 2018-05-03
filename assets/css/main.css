@@ -624,6 +624,10 @@ hr {
 
 }
 
+.download_icon {
+  display: none;
+}
+
 .menu_container {
   position: relative;
   width: 75%;
@@ -952,6 +956,17 @@ hr {
   width: 25%;
 }
 
+.menu_download_button {
+  display: none;
+}
+
+.download_icon {
+  display: inline;
+}
+
+.menu_title_left {
+  vertical-align: top;
+}
 
 }
 

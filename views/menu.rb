@@ -66,6 +66,10 @@ module Views
 
           div class: 'menu_title_right' do
             a 'DOWNLOAD MENU', href: '/', class: 'menu_download_button'
+
+            a href: '/' do
+            img src: '/images/download-icon.svg', class: 'download_icon' 
+            end           
           end
         end
 
@@ -206,6 +210,8 @@ module Views
           food_name('BUTTERKÄSE GRILLED CHEESE •', '13')
           br
           food_desc('Sourdough, tomato soup dip')
+          br
+          br
         end
 
 
@@ -294,7 +300,9 @@ module Views
 
           food_name('Pumpkin seed Sundae ••', '7')
           food_desc('Vanilla ice cream, pumpkin seed brittle, pumpkin seed oil, smoked sea salt')
-
+          br
+          br
+          br
         end
       end
     end
