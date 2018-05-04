@@ -68,8 +68,8 @@ module Views
             a 'DOWNLOAD MENU', href: '/', class: 'menu_download_button'
 
             a href: '/' do
-            img src: '/images/download-icon.svg', class: 'download_icon' 
-            end           
+              img src: '/images/download-icon.svg', class: 'download_icon'
+            end
           end
         end
 
@@ -85,8 +85,6 @@ module Views
         all_items
       end
     end
-
-
 
     def all_items
       div class: 'menu_food_items' do
@@ -234,17 +232,17 @@ module Views
           br
           food_name1('Cheddar Bratwurst')
           br
-          food_desc('Pork, veal, black pepper, cheddar cheese') 
+          food_desc('Pork, veal, black pepper, cheddar cheese')
           br
           br
           food_name1('Traditional Bratwurst')
           br
-          food_desc('Finely ground pork and veal, white pepper, onion')  
+          food_desc('Finely ground pork and veal, white pepper, onion')
           br
           br
           food_name1('HOT ITALIAN')
           br
-          food_desc('Pork, onions, garlic, fennel')                           
+          food_desc('Pork, onions, garlic, fennel')
           br
           br
           food_name1('FRANKFURTER')
@@ -274,9 +272,9 @@ module Views
           food_desc('Sauerkraut ••')
           br
           br
-          food_desc('Speck-Cherry Pepper Relish')  
+          food_desc('Speck-Cherry Pepper Relish')
           br
-          br                  
+          br
           food_desc('Grilled Onions ••')
 
           br

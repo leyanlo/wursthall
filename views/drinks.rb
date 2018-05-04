@@ -2,13 +2,6 @@ require './views/menu'
 
 module Views
   class Drinks < Menu
-    MENU_ITEMS = [
-      ['MAIN', 'menu'],
-      ['DRINKS', 'drinks'],
-      ['LATE NIGHT', 'latenight'],
-      ['KIDS', 'kids']
-    ].freeze
-
     def drink_item1(drink_name, drink_style, drink_price)
       div class: 'drink_name' do
         text drink_name
@@ -21,8 +14,22 @@ module Views
       div class: 'drink_price' do
         text drink_price
       end
+    end
 
-      def drink_item2(maker_name, maker_location, drink_price)
+    def drink_item2(maker_name, maker_location, drink_price)
+      div class: 'maker_name' do
+        text maker_name
+      end
+
+      div class: 'maker_location' do
+        text maker_location
+      end
+
+      div class: 'drink_price' do
+        text drink_price
+      end
+
+      def drink_item3(maker_name, maker_location)
         div class: 'maker_name' do
           text maker_name
         end
@@ -31,44 +38,16 @@ module Views
           text maker_location
         end
 
-        div class: 'drink_price' do
-          text drink_price
-        end
-
-        def drink_item3(maker_name, maker_location)
-          div class: 'maker_name' do
-            text maker_name
-          end
-
-          div class: 'maker_location' do
-            text maker_location
-          end
-
-        end
       end
-
-
-      def nonalc(nonalc_name, nonalc_price)
-        div class: 'nonalc_name' do
-          text nonalc_name
-        end
-
-        div class: 'nonalc_price' do
-          text nonalc_price
-        end
-
-      end
-
     end
 
-    def add_item(item_description, item_price)
-
-      div class: 'item_description' do
-        text item_description
+    def nonalc(nonalc_name, nonalc_price)
+      div class: 'nonalc_name' do
+        text nonalc_name
       end
 
-      div class: 'item_price' do
-        text item_price
+      div class: 'nonalc_price' do
+        text nonalc_price
       end
 
     end
@@ -85,8 +64,8 @@ module Views
             a 'DOWNLOAD MENU', href: '/', class: 'menu_download_button'
 
             a href: '/' do
-            img src: '/images/download-icon.svg', class: 'download_icon' 
-            end              
+              img src: '/images/download-icon.svg', class: 'download_icon'
+            end
           end
         end
 
