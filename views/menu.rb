@@ -111,26 +111,6 @@ module Views
             hr
           end
 
-          h3 'PRETZELS'
-          p 'Bavarian pretzel served with black pepper honey butter'
-
-          br
-          food_name("TRADITIONAL •", '6')
-          br
-          food_desc("Classic pretzel for 1 to 2 people")
-          br
-          br
-          food_name("PAIN D'EPI •", "11")
-          br
-          food_desc("Pull-apart pretzel for 3 to 4 people")
-          br
-          br
-          food_desc2("Add Obatzda (Bavarian cheese spread) and pickles •", "4")
-          br
-          br
-          div class: 'thin_line' do
-            hr
-          end
           food_name('DEVILED EGGS •', '')
           br
           food_desc('Pastured egg, Aleppo pepper, dill, lots of mustard')
@@ -162,6 +142,28 @@ module Views
           food_name('Asparagus, Potato & Sauerkraut Soup ••', '9')
           br
           food_desc('Snap peas, tarragon, pistachios, lemon oil')
+          br
+          br
+          div class: 'thin_line' do
+            hr
+          end
+
+
+          h3 'PRETZELS'
+          p 'Bavarian pretzel served with black pepper honey butter'
+
+          br
+          food_name("TRADITIONAL •", '6')
+          br
+          food_desc("Classic pretzel for 1 to 2 people")
+          br
+          br
+          food_name("PAIN D'EPI •", "11")
+          br
+          food_desc("Pull-apart pretzel for 3 to 4 people")
+          br
+          br
+          food_desc2("Add Obatzda (Bavarian cheese spread) and pickles •", "4")
           br
           br
           div class: 'thin_line' do
