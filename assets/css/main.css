@@ -432,7 +432,7 @@ a {
   position: relative;
   display: inline-block;
   width: 47.5%;
-  top: -12px;
+  top: -15px;
 }
 
 input {
@@ -658,6 +658,7 @@ hr {
 .menu_food li a {
   padding: 10px 0%;
 }
+
 
 .menu_underline {
   border-bottom-color: #baa965;
