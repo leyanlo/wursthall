@@ -81,7 +81,11 @@ module Views
 
           ul class: 'menu_food' do
             MENU_ITEMS.each do |name, link|
+
+            	
+
               li { a name.upcase, href: link , class: ('menu_underline' if name == class_name) }
+               
             end
           end
         end

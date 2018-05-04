@@ -655,10 +655,15 @@ hr {
   width: 18%;
 }
 
+.menu_food li a {
+  padding: 10px 0%;
+}
+
 .menu_underline {
   border-bottom-color: #baa965;
   border-bottom-width: 5px;
   border-bottom-style: solid;
+  padding: 10px 0%;
 }
 
 .menu_food li a {
