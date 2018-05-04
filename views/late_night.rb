@@ -2,6 +2,10 @@ require './views/menu'
 
 module Views
   class LateNight < Menu
+    def class_name
+      'LATE NIGHT'
+    end
+
     def all_items
       div class: 'menu_food_items' do
         br

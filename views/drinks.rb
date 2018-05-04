@@ -2,6 +2,10 @@ require './views/menu'
 
 module Views
   class Drinks < Menu
+    def class_name
+      'DRINKS'
+    end
+
     def drink_item1(drink_name, drink_style, drink_price)
       div class: 'drink_name' do
         text drink_name
@@ -50,36 +54,6 @@ module Views
         text nonalc_price
       end
 
-    end
-
-    def render_main
-      div class: 'menu_page' do
-        div class: 'menu_title' do
-
-          div class: 'menu_title_left' do
-            h2 'MENU'
-          end
-
-          div class: 'menu_title_right' do
-            a 'DOWNLOAD MENU', href: '/', class: 'menu_download_button'
-
-            a href: '/' do
-              img src: '/images/download-icon.svg', class: 'download_icon'
-            end
-          end
-        end
-
-        div class: 'menu_container' do
-
-          ul class: 'menu_food' do
-            MENU_ITEMS.each do |name, link|
-              li { a name.upcase, href: link }
-            end
-          end
-        end
-
-        all_items
-      end
     end
 
     def all_items

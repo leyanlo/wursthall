@@ -2,6 +2,10 @@ require './views/menu'
 
 module Views
   class Kids < Menu
+    def class_name
+      'KIDS'
+    end
+
     def all_items
       div class: 'menu_food_items' do
         br

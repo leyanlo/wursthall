@@ -653,6 +653,9 @@ hr {
   display: inline-block;
   margin: 0px;
   width: 18%;
+}
+
+.menu_underline {
   border-bottom-color: #baa965;
   border-bottom-width: 5px;
   border-bottom-style: solid;
@@ -673,7 +676,7 @@ hr {
   text-align: left;
   border-bottom-color: #f2efe3;
   border-bottom-width: 50px;
-  border-bottom-style: solid;  
+  border-bottom-style: solid;
 }
 
 .menu_food_items h3 {

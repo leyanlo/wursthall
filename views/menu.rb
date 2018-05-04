@@ -9,6 +9,10 @@ module Views
       ['KIDS', 'kids']
     ].freeze
 
+    def class_name
+      'MAIN'
+    end
+
     def food_name(item_name, item_price)
       div class: 'item_name' do
         text item_name
@@ -77,7 +81,7 @@ module Views
 
           ul class: 'menu_food' do
             MENU_ITEMS.each do |name, link|
-              li { a name.upcase, href: link }
+              li { a name.upcase, href: link , class: ('menu_underline' if name == class_name) }
             end
           end
         end
