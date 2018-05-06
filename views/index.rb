@@ -2,42 +2,6 @@ require './views/page'
 
 module Views
   class Index < Page
-    NAV_ITEMS = [
-      ['About', '#about'],
-      ['Menu', '#menu'],
-      ['Logo', '/'],
-      ['Hours', '#hours'],
-      ['Contact', '#contact'],
-    ].freeze
-
-    def render_nav
-      div class: 'nav_container' do
-        ul class: 'menu' do
-          NAV_ITEMS.each do |name, link|
-            case name
-            when 'Logo'
-              a href: '/' do
-                img src: '/images/wursthall-logo-1.svg', class: 'logo'
-              end
-            when 'Menu'
-              div class: 'dropdown' do
-                li { a 'MENU', href: '#menu' }
-
-                div class: 'dropdown-content' do
-                  a 'MAIN', href: '/images/wursthall_main.pdf', class: 'nav_link'
-                  a 'DRINKS', href: '/images/wh_menu_drinks.pdf', class: 'nav_link'
-                  a 'LATE NIGHT', href: '/images/wursthall_latenight.pdf', class: 'nav_link'
-                  a 'KIDS', href: '/images/wursthall_kidsmenu.pdf', class: 'nav_link'
-                end
-              end
-            else
-              li { a name.upcase, href: link, class: 'nav_link' }
-            end
-          end
-        end
-      end
-    end
-
     def render_main
       render_first_section
       render_second_section
@@ -47,13 +11,7 @@ module Views
 
 
     def render_first_section
-      div class: 'first_section' do   
-
- #     div class: 'announcement' do
-  #      p do 
-  #       text 'WE WILL BE CLOSED ON APRIL 1, 2018.'
-   #     end
-   #   end
+      div class: 'first_section' do
 
         img src: '/images/icon-wursthall.svg', class: 'big_image'
       end
@@ -126,11 +84,11 @@ module Views
             div class: 'third_section_menu_col' do
 
               div class: 'menu_main' do
-                a 'MAIN', href: '/images/wursthall_main.pdf'
+                a 'MAIN', href: '/menu'
               end
 
               div class: 'menu_drinks' do
-                a 'DRINKS', href: '/images/wh_menu_drinks.pdf'
+                a 'DRINKS', href: '/drinks'
               end
 
             end
@@ -138,11 +96,11 @@ module Views
             div class: 'third_section_menu_col' do
 
               div class: 'menu_latenight' do
-                a 'LATE NIGHT', href: '/images/wursthall_latenight.pdf'
+                a 'LATE NIGHT', href: '/latenight'
               end
 
               div class: 'menu_kids' do
-                a 'KIDS', href: '/images/wursthall_kidsmenu.pdf'
+                a 'KIDS', href: '/kids'
               end
 
             end
@@ -150,7 +108,7 @@ module Views
         end
       end
     end
-  
+
 
     def render_fourth_section
       div class: 'fourth_section' do
@@ -159,7 +117,7 @@ module Views
           a name: 'contact' do
             div class: 'fourth_section_content_left' do
               h2 "CONTACT US"
-              p do 
+              p do
                 text 'Have a question or a comment?'
                 br
 #                text 'We are currently not taking reservations.'
@@ -234,30 +192,5 @@ module Views
       iframe width: "100%", height:"259", frameborder:"0", style:"border:0", scrolling: "no", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY", class: 'map'
     end
 
-
-
-    def render_footer
-      div class: 'footer' do
-        p do
-          text "Wursthall 2018. All Rights Reserved"
-          br
-          text "310 Baldwin Ave., San Mateo, CA 94401 • 650-931-4282"
-        end
-
-        a href: 'https://www.facebook.com/wursthall/' do
-          img src: '/images/icon-facebook-sml.svg', class: 'footer_icons'
-        end
-
-        a href: 'https://www.instagram.com/wursthall/' do
-          img src: '/images/icon-instagram-sml.svg', class: 'footer_icons'
-        end
-
-        a href: 'https://twitter.com/wursthall/' do
-          img src: '/images/icon-twitter-sml.svg', class: 'footer_icons'
-        end
-
-      end
-
-    end
   end
 end

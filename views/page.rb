@@ -4,6 +4,15 @@ module Views
   class Page < Base
     needs page_title: nil
 
+    NAV_ITEMS = [
+      ['About', '/#about'],
+      ['Menu', '/#menu'],
+      ['Logo', '/'],
+      ['Hours', '/#hours'],
+      ['Contact', '/#contact'],
+    ].freeze
+
+
     def content
       html do
         head do
@@ -51,12 +60,56 @@ module Views
     static :render_analytics
 
     def render_nav
+      div class: 'nav_container' do
+        ul class: 'menu' do
+          self.class::NAV_ITEMS.each do |name, link|
+            case name
+            when 'Logo'
+              a href: '/' do
+                img src: '/images/wursthall-logo-1.svg', class: 'logo'
+              end
+            when 'Menu'
+              div class: 'dropdown' do
+                li { a 'MENU', href: link }
+
+                div class: 'dropdown-content' do
+                  a 'MAIN', href: '/menu', class: 'nav_link'
+                  a 'DRINKS', href: '/drinks', class: 'nav_link'
+                  a 'LATE NIGHT', href: '/latenight', class: 'nav_link'
+                  a 'KIDS', href: '/kids', class: 'nav_link'
+                end
+              end
+            else
+              li { a name.upcase, href: link, class: 'nav_link' }
+            end
+          end
+        end
+      end
     end
 
     def render_main
     end
 
     def render_footer
+      div class: 'footer' do
+        p do
+          text "Wursthall 2018. All Rights Reserved"
+          br
+          text "310 Baldwin Ave., San Mateo, CA 94401 • 650-931-4282"
+        end
+
+        a href: 'https://www.facebook.com/wursthall/' do
+          img src: '/images/icon-facebook-sml.svg', class: 'footer_icons'
+        end
+
+        a href: 'https://www.instagram.com/wursthall/' do
+          img src: '/images/icon-instagram-sml.svg', class: 'footer_icons'
+        end
+
+        a href: 'https://twitter.com/wursthall/' do
+          img src: '/images/icon-twitter-sml.svg', class: 'footer_icons'
+        end
+      end
     end
 
     def render_js
