@@ -139,15 +139,19 @@ module Views
                   p do
                     text 'Lunch'
                     br
-                    text 'Dinner'
+                    a 'Dinner', href: '/menu'
+                    br
+                    a 'Late Night', href: '/latenight'
                   end
                 end
 
                 div class: 'service_hour2' do
                   p do
-                    text 'TBA'
+                    text 'Coming Soon'
                     br
-                    text '5:00 PM - 12:00 AM'
+                    text '5:00 PM - 10:00 PM'
+                    br
+                    text '10:00 PM - 12:00 AM'
 
                   end
 
@@ -189,7 +193,7 @@ module Views
     end
 
     def render_map
-      iframe width: "100%", height:"259", frameborder:"0", style:"border:0", scrolling: "no", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY", class: 'map'
+      iframe width: "100%", height:"241", frameborder:"0", style:"border:0", scrolling: "no", src: "https://www.google.com/maps/embed/v1/place?q=310%20Baldwin%20ave.%2C%20San%20Mateo%2C%20CA%2094401&key=AIzaSyD8Lt6KLOwOoruU-AO70HsZ8a4t_9zqmPY", class: 'map'
     end
 
   end

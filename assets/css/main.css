@@ -532,13 +532,18 @@ hr {
 .service_hour1 {
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 40%;
 }
+
+.service_hour1 a {
+  color: white;
+}
+
 
 .service_hour2 {
   position: relative;
   display: inline-block;
-  width: 50%;
+  width: 60%;
   text-align: right;
 }
 
