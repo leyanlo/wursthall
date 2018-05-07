@@ -92,6 +92,7 @@ module Views
 
     def render_footer
       div class: 'footer' do
+        br
         p do
           text "Wursthall 2018. All Rights Reserved"
           br

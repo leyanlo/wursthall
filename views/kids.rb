@@ -104,6 +104,12 @@ module Views
           br
         end
 
+        div do
+        	br
+        	br
+        	br
+        end
+
       end
     end
 

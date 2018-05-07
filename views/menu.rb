@@ -81,14 +81,13 @@ module Views
 
           ul class: 'menu_food' do
             MENU_ITEMS.each do |name, link|
-
-            	
-
               li { a name.upcase, href: link , class: ('menu_underline' if name == class_name) }
                
             end
           end
         end
+
+  
 
         all_items
       end
@@ -310,7 +309,12 @@ module Views
           food_desc('Vanilla ice cream, pumpkin seed brittle, pumpkin seed oil, smoked sea salt')
           br
           br
-          br
+        end
+
+        div do
+        	br
+        	br
+        	br
         end
 
       end

@@ -221,10 +221,9 @@ module Views
             nonalc('BOYLAN’S DIET COLA', '4')
             br
             br
-            nonalc('ICED TEA', '4')
-            br
-            br
             nonalc('TOPO CHICO MINERAL WATER (SPARKLING)', '4')
+            br
+            br
           end
 
           div class: 'nonalc_div'
@@ -242,11 +241,16 @@ module Views
             nonalc('MOUNTAIN VALLEY SPRING WATER (STILL)', '4')
             br
             br
-            br
           end
 
-
         end
+
+        div do
+        	br
+        	br
+        	br
+        end
+
       end
     end
 
