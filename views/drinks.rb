@@ -77,7 +77,7 @@ module Views
           br
           br
           drink_item1('KALIFORNIA KÖLSCH', 'Kölsch / 4.8%', '6')
-          drink_item2('Magnolia', 'South San Francisco, CA', '400ml')
+          drink_item2('Magnolia', 'San Francisco, CA', '400ml')
           br
           br
           drink_item1('IRREVERENT WIT', 'Belgian-Style Witbier / 5.3%', '7')
@@ -143,7 +143,7 @@ module Views
           br
           br
           drink_item1('AVENTINUS', 'Weizenbock / 8.2%', '9')
-          drink_item2('Schneider', 'Kelheim, GER', '12oz')
+          drink_item2('Schneider', 'Kelheim, GER', '0.5L')
           br
           br
           drink_item1('SAISON DUPONT', 'Saison / 6.5%', '9')
