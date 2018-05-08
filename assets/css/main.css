@@ -664,30 +664,20 @@ hr {
 
 .menu_food li {
   display: inline-block;
-  margin: 0px;
   width: 18%;
-}
-
-.menu_food li a {
-  position: relative;
-  padding: 10px 0%;
-}
-
-
-.menu_underline {
-  border-bottom-color: #baa965;
-  border-bottom-width: 5px;
-  border-bottom-style: solid;
-
 }
 
 .menu_food li a {
   color: rgba(255, 255, 255, 0.5);
   font-size: 12px;
-  font-family: 'Brandon Grotesque Medium';
   letter-spacing: 1px;
+  width: 100%;
+  display: block;
 }
 
+.menu_underline {
+  box-shadow: inset 0 -5px #baa965;
+}
 
 .menu_food_items {
   width: 75%;
